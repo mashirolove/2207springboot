@@ -15,6 +15,7 @@ layui.define(['layer', 'laytpl', 'carousel','form', 'element', 'upload', 'util']
   upload = layui.upload,
   util = layui.util,
   carousel=layui.carousel,
+  table=layui.table;
   device = layui.device(),
   DISABLED = 'layui-btn-disabled';
   
@@ -712,7 +713,7 @@ layui.define(['layer', 'laytpl', 'carousel','form', 'element', 'upload', 'util']
 	    indicator:'none',
 	    width:'100%',
 	    arrow:"none"
-	  })
+	  });
   exports('fly', fly);
 
 });
