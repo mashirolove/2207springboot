@@ -1,0 +1,135 @@
+<div class="layui-container">
+	<form class="layui-form" action="">
+		<div class="layui-row layui-col-space15">
+			<div class="layui-col-md10">
+				<div class="layui-form-item fly-panel" pane="">
+					<div>
+						<input type="checkbox" name="like1[write]" lay-skin="primary"title="写作" checked=""> 
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读"> 
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读"> 
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+						<div class="layui-form-item layui-inline">
+							<select name="interest" lay-filter="aihao">
+								<option value=""></option>
+								<option value="0">写作</option>
+								<option value="1" selected="">阅读</option>
+								<option value="2">游戏</option>
+								<option value="3">音乐</option>
+								<option value="4">旅行</option>
+							</select>
+					</div>
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+						<input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读"> 
+						<input type="checkbox" name="like1[game]" lay-skin="primary" title="游戏">
+				</div>
+				<div class="fly-panel">
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">游戏</label>
+						<div class=" ">
+							<select name="interest" lay-filter="aihao">
+								<option value=""></option>
+								<option value="0">写作</option>
+								<option value="1" selected="">阅读</option>
+								<option value="2">游戏</option>
+								<option value="3">音乐</option>
+								<option value="4">旅行</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">发布日期</label>
+						<div class="">
+							<select name="interest" lay-filter="aihao">
+								<option value=""></option>
+								<option value="0">写作</option>
+								<option value="1" selected="">阅读</option>
+								<option value="2">游戏</option>
+								<option value="3">音乐</option>
+								<option value="4">旅行</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form layui-inline">
+						<div class="layui-form-item">
+						<div class="layui-input-inline">
+						 <input type="text" class="layui-input" id="pubDate" placeholder="">
+							</div>
+						</div>
+					</div
+					<div class="layui-form-mid layui-inline">-</div>
+					<div class="layui-form layui-inline">
+						<div class="layui-form-item">
+								<div class="layui-input-inline">
+									<input type="text" class="layui-input" id="pubDate2" placeholder="">
+								</div>
+						</div>
+					</div
+					<div class="layui-form-item" pane="">
+						<div class="">
+							<input type="checkbox" name="like1[write]" lay-skin="primary"
+								title="写作">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="layui-col-md2 fly-panel">
+				<div>查询</div>
+				<div>发布订单</div>
+			</div>
+		</div>
+		<div>
+			<div class="layui-form-item fly-panel">
+				<div class="layui-inline">
+					<label class="layui-form-label">范围</label>
+					<div class="layui-input-inline" style="width: 100px;">
+						<input type="text" name="price_min" placeholder="￥"
+							autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-form-mid">-</div>
+					<div class="layui-input-inline" style="width: 100px;">
+						<input type="text" name="price_max" placeholder="￥"
+							autocomplete="off" class="layui-input">
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item fly-panel">
+				<label class="layui-form-label">发布日期</label>
+				<div class="layui-input-block">
+					<select name="interest" lay-filter="aihao">
+						<option value=""></option>
+						<option value="0">写作</option>
+						<option value="1" selected="">阅读</option>
+						<option value="2">游戏</option>
+						<option value="3">音乐</option>
+						<option value="4">旅行</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-form-item fly-panel">
+				<label class="layui-form-label">单行输入框</label>
+				<div class="layui-input-block">
+					<input type="text" name="title" lay-verify="title"
+						autocomplete="off" placeholder="请输入标题" class="layui-input">
+				</div>
+			</div>
+			<button type="button" class="layui-btn" value="搜索">
+				<i class="layui-icon"></i>
+			</button>
+		</div>
+		<div class="fly-panel">
+			<button type="button" class="layui-btn">默认按钮</button>
+			<button type="button" class="layui-btn">默认按钮</button>
+			<button type="button" class="layui-btn">默认按钮</button>
+			<button type="button" class="layui-btn">默认按钮</button>
+			<button type="button" class="layui-btn">默认按钮</button>
+			<button type="button" class="layui-btn">默认按钮</button>
+		</div>
+	</form>
+	<div class=“fly_panel”>
+		<table class="layui-hide" id="pubList"></table>
+	</div>
+</div>

@@ -1,0 +1,144 @@
+<% layout('../layouts/layout.html', {
+title: '发单管理',
+page: 'pubManage',
+isColumn: false,
+keywords: 'JeeWeb SpringMVC Spring Hibernate',
+description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系统；它是一款具有代码生成功能的智能快速开发平台；是以Spring Framework为核心容器，Spring MVC为模型视图控制器，Hibernate为数据访问层， Apache Shiro为权限授权层，Ehcahe对常用数据进行缓存，Disruptor作为并发框架，Bootstrap作为前端框架的优秀 开源 系统。'
+}){ %>
+<div class="layui-container">
+	<form class="layui-form" action="">
+		<div class="layui-row layui-col-space15">
+			<div class="layui-col-md10">
+				<div class="layui-form-item fly-panel" pane="">
+					<div>
+						<input type="checkbox" name="like1[write]" lay-skin="primary"
+							title="写作" checked=""> <input type="checkbox"
+							name="like1[read]" lay-skin="primary" title="阅读"> <input
+							type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+						<input type="checkbox" name="like1[read]" lay-skin="primary"
+							title="阅读"> <input type="checkbox" name="like1[read]"
+							lay-skin="primary" title="阅读"> <input type="checkbox"
+							name="like1[read]" lay-skin="primary" title="阅读"> <input
+							type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+						<input type="checkbox" name="like1[read]" lay-skin="primary"
+							title="阅读"> <input type="checkbox" name="like1[game]"
+							lay-skin="primary" title="游戏">
+					</div>
+				</div>
+				<div class="layui-form-item layui-inline">
+					<label class="layui-form-label">选择框</label>
+					<div class="layui-input-block">
+						<select name="city" lay-verify="required">
+							<option value=""></option>
+							<option value="0">北京</option>
+							<option value="1">上海</option>
+							<option value="2">广州</option>
+							<option value="3">深圳</option>
+							<option value="4">杭州</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-form-item layui-inline">
+					<label class="layui-form-label">发布日期</label>
+					<div class="">
+						<select name="interest" lay-filter="aihao">
+							<option value=""></option>
+							<option value="0">写作</option>
+							<option value="1" selected="">阅读</option>
+							<option value="2">游戏</option>
+							<option value="3">音乐</option>
+							<option value="4">旅行</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-form layui-inline">
+					<div class="layui-form-item">
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" id="pubDate"
+								placeholder="">
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-mid layui-inline">-</div>
+				<div class="layui-form layui-inline">
+					<div class="layui-form-item">
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" id="pubDate2"
+								placeholder="">
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item" pane="">
+					<div class="">
+						<input type="checkbox" name="like1[write]" lay-skin="primary"
+							title="写作">
+
+					</div>
+				</div>
+
+
+			</div>
+			<div class="layui-col-md2 fly-panel">
+				<div>查询</div>
+				<div>发布订单</div>
+			</div>
+		</div>
+		<div>
+			<div class="layui-form-item fly-panel">
+				<div class="layui-inline">
+					<label class="layui-form-label">代练金额</label>
+					<div class="layui-input-inline" style="width: 100px;">
+						<input type="text" name="price_min" placeholder="￥"
+							autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-form-mid">-</div>
+					<div class="layui-input-inline" style="width: 100px;">
+						<input type="text" name="price_max" placeholder="￥"
+							autocomplete="off" class="layui-input">
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item fly-panel">
+				<div class="layui-input-block">
+					<select name="interest" lay-filter="aihao">
+						<option value=""></option>
+						<option value="0">写作</option>
+						<option value="1" selected="">快捷标记</option>
+						<option value="2">游戏</option>
+						<option value="3">音乐</option>
+						<option value="4">旅行</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-form-item fly-panel">
+				<div class="layui-input-block">
+					<input type="text" name="title" lay-verify="title"
+						autocomplete="off" placeholder="请输入内容" class="layui-input">
+				</div>
+				<button type="button" class="layui-btn" value="搜索">
+					<i class="layui-icon"></i>
+				</button>
+			</div>
+			<div class="fly-panel">
+				<button type="button" class="layui-btn">默认按钮</button>
+				<button type="button" class="layui-btn">默认按钮</button>
+				<button type="button" class="layui-btn">默认按钮</button>
+				<button type="button" class="layui-btn">默认按钮</button>
+				<button type="button" class="layui-btn">默认按钮</button>
+				<button type="button" class="layui-btn">默认按钮</button>
+			</div>
+		</div>
+	</form>
+	<div class=“fly_panel”>
+		<table class="layui-hide" id="pubList"></table>
+	</div>
+</div>
+<% } %>
+<script>
+    layui.config({
+        version: "3.0.0"
+        ,base: '${staticPath}/mods/'  //这里实际使用时，建议改成绝对路径
+    }).extend({
+        fly: 'index'
+    }).use('fly');
+</script>
