@@ -1,0 +1,7 @@
+2020-02-25 11:42:50 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 22240 (started by mashiro in D:\studyData\开发工具源码\开发框架源码\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-02-25 11:42:50 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-02-25 11:42:53 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-02-25 11:42:54 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-1} inited
+2020-02-25 11:43:00 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-25 11:43:03 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 13.322 seconds (JVM running for 14.772)
+2020-02-25 21:46:57 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-1} closed

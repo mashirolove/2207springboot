@@ -1,0 +1,265 @@
+2020-02-12 16:42:10 [ INFO ] [ Version.java :27(<clinit>)]  HV000001: Hibernate Validator 5.1.1.Final
+2020-02-12 16:42:10 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting VueWebBootApplication on LAPTOP-MEU0NI9O with PID 1520 (started by mashiro in D:\studyData\开发工具源码\开发框架源码\jeeweb\jeeweb-web\jeeweb-vue)
+2020-02-12 16:42:10 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-02-12 16:42:12 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-02-12 16:42:13 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-1} inited
+2020-02-12 16:42:14 [ WARN ] [ DefaultWebSecurityManager.java :173(setSessionManager)]  The org.apache.shiro.web.mgt.DefaultWebSecurityManager implementation expects SessionManager instances that implement the org.apache.shiro.web.session.mgt.WebSessionManager interface.  The configured instance is of type [org.apache.shiro.session.mgt.DefaultSessionManager] which does not implement this interface..  This may cause unexpected behavior.
+2020-02-12 16:42:17 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-12 16:42:19 [ INFO ] [ StdSchedulerFactory.java :1208(instantiate)]  Using default implementation for ThreadExecutor
+2020-02-12 16:42:19 [ INFO ] [ SchedulerSignalerImpl.java :61(<init>)]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-02-12 16:42:19 [ INFO ] [ QuartzScheduler.java :229(<init>)]  Quartz Scheduler v.2.3.0 created.
+2020-02-12 16:42:19 [ INFO ] [ RAMJobStore.java :155(initialize)]  RAMJobStore initialized.
+2020-02-12 16:42:19 [ INFO ] [ QuartzScheduler.java :294(initialize)]  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-02-12 16:42:19 [ INFO ] [ StdSchedulerFactory.java :1362(instantiate)]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-02-12 16:42:19 [ INFO ] [ StdSchedulerFactory.java :1366(instantiate)]  Quartz scheduler version: 2.3.0
+2020-02-12 16:42:19 [ INFO ] [ QuartzScheduler.java :2287(setJobFactory)]  JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@36ee0d0f
+2020-02-12 16:42:19 [ INFO ] [ DocumentationPluginsBootstrapper.java :151(start)]  Context refreshed
+2020-02-12 16:42:19 [ INFO ] [ DocumentationPluginsBootstrapper.java :154(start)]  Found 1 custom documentation plugin(s)
+2020-02-12 16:42:20 [ INFO ] [ ApiListingReferenceScanner.java :41(scan)]  Scanning for api listing references
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_1
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_2
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_2
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_2
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_3
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_2
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_3
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_4
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_2
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_3
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_4
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_5
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_3
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_4
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_5
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_6
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_3
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: jqueryValidationEngineValidateUsingGET_1
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_5
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_6
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_7
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_4
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_6
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_7
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_8
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_4
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: ajaxListUsingGET_1
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: ajaxListUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_7
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_8
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: doSaveUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_9
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_5
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_8
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_9
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_10
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_5
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_9
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_10
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_11
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_6
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingGET_1
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: uploadUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_6
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_10
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_11
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_12
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_7
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_7
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_11
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_12
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_13
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_8
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_12
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_13
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_14
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_13
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_14
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_15
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: retrySendUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_8
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_14
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_15
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_16
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_9
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: indexUsingGET_1
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: addUsingPOST_9
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: batchDeleteUsingPOST_15
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: deleteUsingPOST_16
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: exportUsingGET_1
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_17
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingPOST_10
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: updateUsingGET_2
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingGET_18
+2020-02-12 16:42:20 [ INFO ] [ CachingOperationNameGenerator.java :40(startingWith)]  Generating unique operation named: listUsingPOST_1
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ SizeAnnotationPlugin.java :52(apply)]  searching for @size: false
+2020-02-12 16:42:20 [ INFO ] [ QuartzScheduler.java :547(start)]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-02-12 16:42:20 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started VueWebBootApplication in 10.844 seconds (JVM running for 11.76)
+2020-02-12 16:42:30 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：短信修复发送定时任务 方法：run
+2020-02-12 16:42:30 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：邮件修复发送定时任务 方法：run
+2020-02-12 16:42:30 [ INFO ] [ EmailTask.java :56(run)]   邮件重发日志运行开始......................................Wed Feb 12 16:42:30 CST 2020
+2020-02-12 16:42:30 [ INFO ] [ SmsTask.java :57(run)]   短信重发日志运行开始......................................Wed Feb 12 16:42:30 CST 2020
+2020-02-12 16:42:30 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：邮件修复发送定时任务 耗时：318 毫秒
+2020-02-12 16:42:30 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：短信修复发送定时任务 耗时：318 毫秒
+2020-02-12 16:42:40 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：邮件修复发送定时任务 方法：run
+2020-02-12 16:42:40 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：短信修复发送定时任务 方法：run
+2020-02-12 16:42:40 [ INFO ] [ EmailTask.java :56(run)]   邮件重发日志运行开始......................................Wed Feb 12 16:42:40 CST 2020
+2020-02-12 16:42:40 [ INFO ] [ SmsTask.java :57(run)]   短信重发日志运行开始......................................Wed Feb 12 16:42:40 CST 2020
+2020-02-12 16:42:40 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：邮件修复发送定时任务 耗时：26 毫秒
+2020-02-12 16:42:40 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：短信修复发送定时任务 耗时：30 毫秒
+2020-02-12 16:42:50 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：短信修复发送定时任务 方法：run
+2020-02-12 16:42:50 [ INFO ] [ SmsTask.java :57(run)]   短信重发日志运行开始......................................Wed Feb 12 16:42:50 CST 2020
+2020-02-12 16:42:50 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：邮件修复发送定时任务 方法：run
+2020-02-12 16:42:50 [ INFO ] [ EmailTask.java :56(run)]   邮件重发日志运行开始......................................Wed Feb 12 16:42:50 CST 2020
+2020-02-12 16:42:50 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：短信修复发送定时任务 耗时：19 毫秒
+2020-02-12 16:42:50 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：邮件修复发送定时任务 耗时：26 毫秒
+2020-02-12 16:43:00 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：邮件修复发送定时任务 方法：run
+2020-02-12 16:43:00 [ INFO ] [ EmailTask.java :56(run)]   邮件重发日志运行开始......................................Wed Feb 12 16:43:00 CST 2020
+2020-02-12 16:43:00 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：短信修复发送定时任务 方法：run
+2020-02-12 16:43:00 [ INFO ] [ SmsTask.java :57(run)]   短信重发日志运行开始......................................Wed Feb 12 16:43:00 CST 2020
+2020-02-12 16:43:00 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：邮件修复发送定时任务 耗时：23 毫秒
+2020-02-12 16:43:00 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：短信修复发送定时任务 耗时：29 毫秒
+2020-02-12 16:43:10 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：短信修复发送定时任务 方法：run
+2020-02-12 16:43:10 [ INFO ] [ SmsTask.java :57(run)]   短信重发日志运行开始......................................Wed Feb 12 16:43:10 CST 2020
+2020-02-12 16:43:10 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：邮件修复发送定时任务 方法：run
+2020-02-12 16:43:10 [ INFO ] [ EmailTask.java :56(run)]   邮件重发日志运行开始......................................Wed Feb 12 16:43:10 CST 2020
+2020-02-12 16:43:10 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：短信修复发送定时任务 耗时：27 毫秒
+2020-02-12 16:43:10 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：邮件修复发送定时任务 耗时：30 毫秒
+2020-02-12 16:43:20 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：短信修复发送定时任务 方法：run
+2020-02-12 16:43:20 [ INFO ] [ SmsTask.java :57(run)]   短信重发日志运行开始......................................Wed Feb 12 16:43:20 CST 2020
+2020-02-12 16:43:20 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：邮件修复发送定时任务 方法：run
+2020-02-12 16:43:20 [ INFO ] [ EmailTask.java :56(run)]   邮件重发日志运行开始......................................Wed Feb 12 16:43:20 CST 2020
+2020-02-12 16:43:20 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：邮件修复发送定时任务 耗时：21 毫秒
+2020-02-12 16:43:20 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：短信修复发送定时任务 耗时：15 毫秒
+2020-02-12 16:43:30 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：短信修复发送定时任务 方法：run
+2020-02-12 16:43:30 [ INFO ] [ QuartzJobFactory.java :41(executeInternal)]  任务开始执行 - 名称：邮件修复发送定时任务 方法：run
+2020-02-12 16:43:30 [ INFO ] [ EmailTask.java :56(run)]   邮件重发日志运行开始......................................Wed Feb 12 16:43:30 CST 2020
+2020-02-12 16:43:30 [ INFO ] [ SmsTask.java :57(run)]   短信重发日志运行开始......................................Wed Feb 12 16:43:30 CST 2020
+2020-02-12 16:43:30 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：短信修复发送定时任务 耗时：23 毫秒
+2020-02-12 16:43:30 [ INFO ] [ QuartzJobFactory.java :46(executeInternal)]  任务执行结束 - 名称：邮件修复发送定时任务 耗时：23 毫秒
+2020-02-12 16:43:30 [ INFO ] [ QuartzScheduler.java :585(standby)]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-02-12 16:43:30 [ INFO ] [ QuartzScheduler.java :666(shutdown)]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2020-02-12 16:43:30 [ INFO ] [ QuartzScheduler.java :585(standby)]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2020-02-12 16:43:30 [ INFO ] [ QuartzScheduler.java :740(shutdown)]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-02-12 16:43:30 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-1} closed
