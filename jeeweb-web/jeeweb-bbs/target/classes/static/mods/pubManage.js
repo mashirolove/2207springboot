@@ -3,11 +3,12 @@
 
  @Name: 发单管理模块
  */
-layui.define(['laypage', 'fly', 'element', 'laydate','table'], function(exports){
+layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(exports){
 	var $ = layui.jquery;
 	var fly = layui.fly;
 	var table = layui.table;
 	var laydate = layui.laydate;
+	var layer=layui.layer;
 	//发单管理分页
 	  table.render({
 	        elem: '#pubList'
@@ -20,7 +21,7 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table'], function(exports)
 	                return where;
 	            }()
 	            ,cols: [[
-	            	{type:'checkbox'},
+	            	{type:'checkbox',fixed: 'left'},
 	                {field: 'name',title: '产品名称', minWidth: 300, templet: function(d){
 	                    var href = d.name || ('/product/'+ d.productId+'/download');
 	                    return '<a href="'+ href +'" target="_blank" class="layui-table-link">'+ d.name + '</a>'
@@ -55,8 +56,28 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table'], function(exports)
 	            }
 	        });
 	  laydate.render({
-		    elem: '#pubDate,#pubDate2'
+		    elem: '#pubDate,#pubDate2',
+	       value:"2020-02-03"
 		  });
-	
+	  laydate.render({
+		    elem: '#pubDate2',		   
+		    value:"2020-03-03"
+		  });
+	  $("[data-method='newOrder']").on("click",function(){
+		  var tpl;
+		  debugger;
+		  $.get("../pubManage/pubOrder.html",function(data,status){
+			  tpl=data;
+		  })
+		  layer.open({
+			  title: '新建订单',
+			  type: 1,
+			  content:tpl,
+			  /*content:'弹出层'*/
+			});
+		  
+	  });
+			 
+  
   exports('pubManage', null);
 });
