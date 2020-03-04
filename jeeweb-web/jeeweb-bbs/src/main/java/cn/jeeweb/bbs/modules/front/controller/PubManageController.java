@@ -57,7 +57,7 @@ public class PubManageController extends BaseBeanController<Example> {
     @Autowired
     private IPraiseService praiseService;
 
-    @GetMapping({"page/{page}","/","","{orderBy}/page/{page}","{orderBy}"})
+    @GetMapping(value = "")
     public ModelAndView index(Model model,
                               @PathVariable(value = "page",required = false) Integer page,
                               @PathVariable(value = "orderBy",required = false) String orderBy) {
@@ -76,6 +76,26 @@ public class PubManageController extends BaseBeanController<Example> {
         model.addAttribute("listUrl",listUrl);
         model.addAttribute("isColumn",false);
         return new ModelAndView("modules/front/pubManage/index");
+    }
+    @GetMapping(value = "pubOrder")
+    public ModelAndView newOrder(Model model,
+                              @PathVariable(value = "page",required = false) Integer page,
+                              @PathVariable(value = "orderBy",required = false) String orderBy) {
+        if (page == null){
+            page = 1;
+        }
+        String listUrl="/example";
+        if (StringUtils.isEmpty(orderBy)){
+            orderBy = "publish";
+        }else{
+            listUrl+="/"+orderBy;
+        }
+        Page examplePageBean = listExamplePage(page,20,false,orderBy);
+        model.addAttribute("examplePageBean",examplePageBean);
+        model.addAttribute("orderBy",orderBy);
+        model.addAttribute("listUrl",listUrl);
+        model.addAttribute("isColumn",false);
+        return new ModelAndView("modules/front/pubManage/pubOrder");
     }
 
     @GetMapping({"my"})

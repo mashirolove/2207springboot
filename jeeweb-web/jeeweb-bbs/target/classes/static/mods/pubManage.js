@@ -64,16 +64,12 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(
 		    value:"2020-03-03"
 		  });
 	  $("[data-method='newOrder']").on("click",function(){
-		  var tpl;
-		  debugger;
-		  $.get("../pubManage/pubOrder.html",function(data,status){
-			  tpl=data;
-		  })
+		  var tpl=$('#pubOrder').find("div:eq(1)").html();
 		  layer.open({
 			  title: '新建订单',
-			  type: 1,
-			  content:tpl,
-			  /*content:'弹出层'*/
+			  type: 2,
+			  content:"/pubManage/pubOrder",
+			  area:['800px','700px']
 			});
 		  
 	  });
