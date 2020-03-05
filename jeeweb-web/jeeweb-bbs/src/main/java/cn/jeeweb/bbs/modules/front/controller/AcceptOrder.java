@@ -39,16 +39,16 @@ import java.util.List;
  *
  * @version V1.0
  * @package cn.jeeweb.bbs.modules.modules.front.controller
- * @title: example控制器
- * @description: 发单管理
- * @author: zk
+ * @title: acceptOrder控制器
+ * @description: example控制器
+ * @author: 王存见
  * @date: 2018-09-04 16:46:10
  * @copyright: 2018 www.jeeweb.cn Inc. All rights reserved.
  */
 
-@RestController("FrontPubManageController")
-@RequestMapping("pubManage")
-public class PubManageController extends BaseBeanController<Example> {
+@RestController("FrontacceptOrderController")
+@RequestMapping("acceptOrder")
+public class AcceptOrder extends BaseBeanController<Example> {
 
     @Autowired
     private IExampleService exampleService;

@@ -278,8 +278,11 @@
 
 .ui-height36 {
 	height: 36px;
+	
 }
-
+.ui-line-height36{
+	line-height: 36px;
+}
 .layui-input-block-margin_left0 {
 	margin-left: 0px;
 	width: 87px;
@@ -339,6 +342,10 @@
 	padding-left: 15px;
 	padding-right: 15px;
 }
+.ui-padding-base{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 .ui-height60{
 	height: 60px;
 	line-height: 60px;
@@ -363,4 +370,52 @@
 .ui-three-line-width{
 	width: 230px;
 }
+.ui-width280{
+	width: 280px;
+}
+.ui-float-right{
+	float: right;
+}
+.ui-margin-top20{
+	margin-top: 20px;
+}
+.ui-weight-height60{
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+}
+.ui-position-relative{
+	position: relative;
+}
+.ui-position-absolute-bottom0{
+	position: absolute;
+	bottom: 0px;
+}
+.ui-height127{
+  height: 127px;
+  line-height: 127px;
+}
+.ui-margin-left0 {
+	margin-left: 0px !important;
+}
+.ui-margin-right0{
+	margin-right: 0px !important;
+}
+.ui-width73{
+	width: 73px;
+}
+.ui-width50{
+	width: 50px;
+}
+.ui-width60{
+	width: 60px;
+}
+.ui-padding-left0{
+	padding-left: 0px !important;
+}
+.ui-margin-left75{
+	margin-left: 75px;
+}
+.ui-width345{
+	width: 345px;
 }

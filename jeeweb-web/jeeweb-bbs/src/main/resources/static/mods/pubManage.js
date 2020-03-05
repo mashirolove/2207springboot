@@ -63,15 +63,39 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(
 		    elem: '#pubDate2',		   
 		    value:"2020-03-03"
 		  });
+	  /*
+	   * 发布订单弹出层
+	   * */
 	  $("[data-method='newOrder']").on("click",function(){
 		  var tpl=$('#pubOrder').find("div:eq(1)").html();
 		  layer.open({
 			  title: '新建订单',
 			  type: 2,
 			  content:"/pubManage/pubOrder",
-			  area:['800px','700px']
+			  area:['800px','700px'],
+			}); 
+	  });
+	  /*发布按钮
+	     * 金额确认弹出层
+	     *  data-method="publish"
+	   * */
+	  $("[data-method='publish']").on("click",function(){
+		 /* pubIndex = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+		  parent.layer.close(pubIndex);*/
+		  var tpl=$("#pubListDiv").find("div:eq(0)").html();
+		  layer.open({
+			  title: '确认金额',
+			  type:1,
+			  content:tpl,
+			  btn: ['确认', '取消'],
+			  yes: function(index, layero){
+				  layer.closeAll();
+				  pubIndex = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+				  parent.layer.close(pubIndex);//关闭iframe弹出层
+				  },
+		      btn2: function(index, layero){
+		    	  layer.close(index);}
 			});
-		  
 	  });
 			 
   
