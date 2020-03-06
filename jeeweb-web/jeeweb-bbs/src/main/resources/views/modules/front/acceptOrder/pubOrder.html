@@ -1,78 +1,45 @@
 <% layout('../layouts/layoutBlank.html', {
 title: '发单管理',
-page: 'acceptOrder',
+page: 'pubManage',
 isColumn: false,
 keywords: 'JeeWeb SpringMVC Spring Hibernate',
 description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系统；它是一款具有代码生成功能的智能快速开发平台；是以Spring Framework为核心容器，Spring MVC为模型视图控制器，Hibernate为数据访问层， Apache Shiro为权限授权层，Ehcahe对常用数据进行缓存，Disruptor作为并发框架，Bootstrap作为前端框架的优秀 开源 系统。'
 }){ %>
-<div class="fly-header ui-padding ui-margin-bottom10 layui-bg-black">
-	<div>
-		<div class="layui-inline">
-			<button type="button" class="layui-btn ui-height60">
-				<i class="iconfont icon-add ui-font-size60 "></i>发布并关闭
-			</button>
-		</div>
-		<div class="layui-inline">
-			<button type="button" class="layui-btn ui-height60">
-				<i class="iconfont icon-rising ui-font-size60"></i>发布并添加
-			</button>
-		</div>
-		<div class="layui-inline">
-			<button type="button" class="layui-btn ui-height60">
-				<i class="iconfont icon-instruction ui-font-size60 "></i>刷新
-			</button>
-		</div>
-	</div>
-</div>
 <div class="layui-container ui-padding">
 	<div class="layui-tab ">
-		<ul class="layui-tab-title ">
-			<li class="layui-this fly-panel">常规</li>
+		<ul class="layui-tab-title layui-inline">
+			<li class="layui-this fly-panel">常规(接手)</li>
 			<li class="fly-panel">发单流程</li>
 		</ul>
+		<div class="layui-inline"><a>分享订单信息</a></div>			
 		<div class="layui-tab-content">
 			<div class="layui-tab-item layui-show ">
 				<div class="ui-div-border ui-div-tips">小提示：LOL排位赛请标明模式如“单双排”或“灵活组排”</div>
 				<form class="layui-form layui-form-pane" action="">
 					<div>
-						<div class="layui-form-item layui-inline">
-							<label class="layui-form-label">游戏区服</label>
-							<div
-								class="layui-input-inline ui-input-width135 ui-background-color">
-								<select name="quiz1">
-									<option value="">请选择省</option>
-									<option value="浙江" selected="">浙江省</option>
-									<option value="你的工号">江西省</option>
-									<option value="你最喜欢的老师">福建省</option>
-								</select>
+					<div class="layui-form-item layui-inline ui-width280">
+								<label class="layui-form-label">订单号</label>
+								<div class="layui-input-block">
+									<input type="text" name="title" lay-verify="title"
+										autocomplete="off" placeholder="请输入标题" class="layui-input">
+								</div>
 							</div>
-							<div
-								class="layui-input-inline ui-background-color ui-input-width135">
-								<select name="quiz2 ">
-									<option value="">请选择市</option>
-									<option value="杭州">杭州</option>
-									<option value="宁波" disabled="">宁波</option>
-									<option value="温州">温州</option>
-									<option value="温州">台州</option>
-									<option value="温州">绍兴</option>
-								</select>
-							</div>
-							<div
-								class="layui-input-inline ui-background-color ui-input-width135">
-								<select name="quiz3 ">
-									<option value="">请选择县/区</option>
-									<option value="西湖区">西湖区</option>
-									<option value="余杭区">余杭区</option>
-									<option value="拱墅区">临安市</option>
-								</select>
+							<div class="layui-form-item layui-inline ui-width280">
+								<label class="layui-form-label">发布时间</label>
+								<div class="layui-input-block">
+									<input type="text" name="title" lay-verify="title"
+										autocomplete="off" placeholder="请输入标题" class="layui-input">
+								</div>
 							</div>
 						</div>
-						<div class="layui-inline fly-panel-noColor">
-							<button type="button"
-								class="layui-btn ui-botton-80 layui-btn-primary">代练</button>
-							<button type="button" class="layui-btn ui-botton-80 ">陪练</button>
+						<div class="layui-form-item layui-inline">
+						<label class="layui-form-label">订单区服</label>
+						<div class="layui-input-block ">
+							<input type="text" name="title" lay-verify="title"
+								autocomplete="off" placeholder="请输入标题" class="layui-input">
 						</div>
 					</div>
+						<div class="layui-inline ui-margin-bottom15"><a>分享订单信息</a></div>
 					<div class="layui-form-item">
 						<label class="layui-form-label">订单任务</label>
 						<div class="layui-input-block">
@@ -81,28 +48,21 @@ description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系�
 						</div>
 					</div>
 					<div>
-						<div class="layui-form-item layui-inline ui-three-line-width">
-							<label class="layui-form-label">订单价格</label>
-							<div class="layui-input-block">
-								<input type="text" name="title" lay-verify="title"
-									autocomplete="off" placeholder="请输入标题" class="layui-input">
+					<div class="layui-form-item layui-inline ui-width280">
+								<label class="layui-form-label">订单价格</label>
+								<div class="layui-input-block">
+									<input type="text" name="title" lay-verify="title"
+										autocomplete="off" placeholder="请输入标题" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item layui-inline ui-width280">
+								<label class="layui-form-label">订单时限</label>
+								<div class="layui-input-block">
+									<input type="text" name="title" lay-verify="title"
+										autocomplete="off" placeholder="请输入标题" class="layui-input">
+								</div>
 							</div>
 						</div>
-						<div class="layui-form-item layui-inline ui-three-line-width">
-							<label class="layui-form-label">订单天数</label>
-							<div class="layui-input-block">
-								<input type="text" name="title" lay-verify="title"
-									autocomplete="off" placeholder="请输入标题" class="layui-input">
-							</div>
-						</div>
-						<div class="layui-form-item layui-inline ui-three-line-width">
-							<label class="layui-form-label">小时数</label>
-							<div class="layui-input-block">
-								<input type="text" name="title" lay-verify="title"
-									autocomplete="off" placeholder="请输入标题" class="layui-input">
-							</div>
-						</div>
-					</div>
 					<div>
 						<div class="layui-form-item layui-inline">
 							<label class="layui-form-label">安全保证金</label>
@@ -132,28 +92,6 @@ description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系�
 						</div>
 					</div>
 					<div>
-						<div class="layui-form-item layui-inline ui-three-line-width">
-							<label class="layui-form-label">游戏账号</label>
-							<div class="layui-input-block">
-								<input type="text" name="title" lay-verify="title"
-									autocomplete="off" placeholder="请输入标题" class="layui-input">
-							</div>
-						</div>
-						<div class="layui-form-item layui-inline ui-three-line-width">
-							<label class="layui-form-label">游戏密码</label>
-							<div class="layui-input-block">
-								<input type="text" name="title" lay-verify="title"
-									autocomplete="off" placeholder="请输入标题" class="layui-input">
-							</div>
-						</div>
-						<div class="layui-form-item layui-inline ui-three-line-width">
-							<label class="layui-form-label">角色名称</label>
-							<div class="layui-input-block">
-								<input type="text" name="title" lay-verify="title"
-									autocomplete="off" placeholder="请输入标题" class="layui-input">
-							</div>
-						</div>
-					</div>
 					<div class="layui-form-item layui-form-text">
 						<label class="layui-form-label">订单说明</label>
 						<div class="layui-input-block">
@@ -168,12 +106,17 @@ description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系�
 					</div>
 					<div class="layui-row">
 						<div class="layui-col-sm10">
-							<div class="layui-form-item">
+						    <div>
+							<div class="layui-form-item layui-inline">
 								<label class="layui-form-label">联系人</label>
 								<div class="layui-input-block">
 									<input type="text" name="title" lay-verify="title"
 										autocomplete="off" placeholder="请输入标题" class="layui-input">
 								</div>
+							</div>
+															<div class="layui-inline ui-margin-bottom15">
+								<button type="button" class="layui-btn">上家信息</button>
+							</div>
 							</div>
 							<div class="layui-form-item layui-inline ui-width280">
 								<label class="layui-form-label">电话</label>
@@ -193,74 +136,14 @@ description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系�
 						</div>
 						<div class="layui-col-sm2  ui-width-center">
 							<div class="ui-margin-top20" data-method="publish">
-								<button type="button" class="layui-btn ui-weight-height60">发布</button>
+								<button type="button" class="layui-btn ui-weight-height60">接手</button>
 							</div>
 						</div>
 					</div>
-					<div class="layui-row layui-col-space15">
-						<div class="layui-col-sm9">
-							<div class="layui-form-item" pane="">
-								<label class="layui-form-label" style="line-height: 80px;">发布频道</label>
-								<div class="layui-input-block">
-									<input type="radio" name="sex" value="男"
-										title="优质订单 经平台认证实力打手区 更高质高效完成订单" checked=""> <input
-										type="radio" name="sex" value="女"
-										title="优质订单 经平台认证实力打手区 更高质高效完成订单"> <input type="radio"
-										name="sex" value="禁" title="优质订单 经平台认证实力打手区 更高质高效完成订单">
-
-								</div>
-							</div>
-						</div>
-						<div class="layui-col-sm3 ui-position-relative ui-height127">
-							<div class="layui-form-item ui-position-absolute-bottom0">
-								<div class="layui-input-block ui-margin-left0">
-									<input type="text" name="title" lay-verify="title"
-										autocomplete="off" placeholder="请输入标题" class="layui-input"
-										value="已选组：优质频道组" disabled="disabled">
-								</div>
-							</div>
-						</div>
-					</div>
+					<div class="ui-padding-base">
+		               <h4>订单会在接单者提交验收的48小时后自动确认结算,请及时关注进展! 因个人疏忽造成损失后果自负sfafasfa2314155555555555555555555555555555555555555555555555555!</h4</h4>
+		               </div>
 					<div>
-					    <div class="layui-inline">
-						<div class="layui-form-item layui-inline">
-							<label class="layui-form-label">自动下架</label>
-							<div class="layui-input-block layui-inline ui-margin-left0 ui-width73 ui-margin-right0">
-								<select name="interest" lay-filter="aihao">
-									<option value=""></option>
-									<option value="0">写作</option>
-									<option value="1" selected="">阅读</option>
-									<option value="2">游戏</option>
-									<option value="3">音乐</option>
-									<option value="4">旅行</option>
-								</select>
-							</div>
-							<div class="layui-inline"><label class="layui-form-label ui-margin-left0">天</label></div>
-							
-						</div>
-						</div>
-						<div class="layui-inline ui-float-right">
-						<div class="layui-form-item layui-inline">
-						  <label class="layui-form-label">拒绝新手和大于</label>
-							<div class="layui-input-block  ui-margin-left0 layui-inline ui-width50 ui-margin-right0">
-								<select name="interest" lay-filter="aihao">
-									<option value=""></option>
-									<option value="0">1</option>
-									<option value="1" selected="">2</option>
-									<option value="2">游戏</option>
-									<option value="3">音乐</option>
-									<option value="4">旅行</option>
-								</select>
-							</div>
-							    <div class="layui-inline">
-								<label class="layui-form-label ui-margin-left0">%者接手 </label><div class="layui-inline ui-height36 ui-line-height36">
-							<button type="button"
-								class="layui-btn layui-btn-xs layui-btn-disabled">
-								<i class="iconfont icon-close"></i>
-							</button>
-						</div></div>
-						</div>
-					</div>
 					</div>
 				</form>
 			</div>

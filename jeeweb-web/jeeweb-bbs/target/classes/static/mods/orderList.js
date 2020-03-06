@@ -1,7 +1,7 @@
 /**
 
 
- @Name: 发单管理模块
+ @Name: 接单管理模块
  */
 layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(exports){
 	var $ = layui.jquery;
@@ -9,6 +9,8 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(
 	var table = layui.table;
 	var laydate = layui.laydate;
 	var layer=layui.layer;
+	var pubIndex;
+	var confirmIndex
 	//发单管理分页
 	  table.render({
 	        elem: '#pubList'
@@ -55,6 +57,18 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(
 	                }
 	            }
 	        });
+	 table.on('rowDouble(showDetail)', function(obj){
+		 layer.open({
+			  title: '订单22454',
+			  type: 2,
+			  content:"/acceptOrder/showDetail",
+			  area:['800px','700px'],
+			  success:function(layero,index){
+				  layer.getChildFrame('body',index).addClass("ui-margin-top0");//通过getChildFrame方法得到body
+				  //将body上默认为margin-top:60px;的值置为0
+			  }
+			}); 
+		});
 	  laydate.render({
 		    elem: '#pubDate,#pubDate2',
 	       value:"2020-02-03"
@@ -67,7 +81,7 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(
 	   * 发布订单弹出层
 	   * */
 	  $("[data-method='newOrder']").on("click",function(){
-		  var tpl=$('#pubOrder').find("div:eq(1)").html();
+/*		  var tpl=$('#pubOrder').find("div:eq(1)").html();*/
 		  layer.open({
 			  title: '新建订单',
 			  type: 2,
@@ -99,5 +113,5 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(
 	  });
 			 
   
-  exports('acceptOrder', null);
+  exports('orderList', null);
 });

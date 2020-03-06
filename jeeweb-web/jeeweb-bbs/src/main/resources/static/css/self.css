@@ -147,6 +147,9 @@
 .ui-margin-bottom30 {
 	margin-bottom: 30px;
 }
+.ui-margin-bottom0 {
+	margin-bottom:0px;
+}
 
 .ui-margin-bottom5 {
 	margin-bottom: 5px;
@@ -261,6 +264,9 @@
 .ui-form-div-width95 {
 	width: 95px;
 }
+.ui-margin-bottom15{
+	margin-bottom: 15px;
+}
 
 .layui-input-block-margin80 {
 	margin-left: 80px !important;
@@ -309,6 +315,9 @@
 .ui-margin-top10 {
 	margin-top: 10px;
 }
+.ui-margin-top0 {
+	margin-top:0px;
+}
 
 .layui-input-block-margin_left0_top0 {
 	margin-left: 0px;
@@ -323,6 +332,9 @@
 
 .ui-margin-right {
 	margin-right: 0px;
+}
+.ui-margin-right15{
+	margin-right: 15px;
 }
 
 .ui-botton-80 {
@@ -376,6 +388,9 @@
 .ui-float-right{
 	float: right;
 }
+.ui-float-left{
+	float: left;
+}
 .ui-margin-top20{
 	margin-top: 20px;
 }
@@ -418,4 +433,8 @@
 }
 .ui-width345{
 	width: 345px;
+}
+.ui-bth-left-width{
+	width: 200px;
+	margin-left: 20px;
 }

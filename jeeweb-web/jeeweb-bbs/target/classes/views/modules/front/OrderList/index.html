@@ -1,0 +1,86 @@
+<% layout('../layouts/layout.html', {
+title: '发单管理',
+page: 'orderList',
+isColumn: false,
+keywords: 'JeeWeb SpringMVC Spring Hibernate',
+description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系统；它是一款具有代码生成功能的智能快速开发平台；是以Spring Framework为核心容器，Spring MVC为模型视图控制器，Hibernate为数据访问层， Apache Shiro为权限授权层，Ehcahe对常用数据进行缓存，Disruptor作为并发框架，Bootstrap作为前端框架的优秀 开源 系统。'
+}){ %>
+ <div class="layui-container">
+<div>
+   <ul class="layui-nav layui-bg-blue">
+  <li class="layui-nav-item"><a href=""><i class="iconfont icon-falling"></i>优选订单</a></li>
+  <li class="layui-nav-item layui-this"><a href=""><i class="iconfont icon-falling"></i>公共频道</a></li>
+  <li class="layui-nav-item"><a href=""><i class="iconfont icon-falling"></i>内部频道</a></li>
+  <li class="layui-nav-item"><a href="javascript:;"><i class="iconfont icon-falling"></i>优选专区</a></li>
+</ul> 
+  <div class="ui-padding-base ui-padding">
+			<div class="layui-form-item layui-inline ui-height38 ui-margin-right">
+				<div class="layui-input-block layui-input-block-margin_left0_top0 layui-inline fly-panel ui-form-div-width" style="width:200px;">
+					<input type="text" name="title" lay-verify="title"
+						autocomplete="off" placeholder="请输入内容" class="layui-input">
+				</div>
+				<div class="layui-inline fly-panel">
+				<button type="button" class="layui-btn">
+					<i class="iconfont icon-sousuo"></i>搜索
+				</button>
+				</div>
+				<button type="button" class="layui-btn ui-botton-80"><i class="iconfont icon-close"></i>刷新</button>
+			</div>
+			<div class="layui-inline fly-panel-noColor ui-margin-bottom5 ui-float-right">
+			 价格:
+				<button type="button" class="layui-btn ui-botton-80">不限</button>
+				<button type="button" class="layui-btn ui-botton-80">1-100元</button>
+				<button type="button" class="layui-btn ui-botton-80">101-300 元</button>
+				<button type="button" class="layui-btn ui-botton-80">301-500 元</button>
+				<button type="button" class="layui-btn ui-botton-80">500元以上</button>
+				<div class="layui-form-item layui-inline ui-form-div-width ui-margin-bottom0">
+					<label class="layui-form-label ui-form-lable">段位</label>
+					<div class="layui-input-block layui-input-block-margin80">
+						<select name="interest" lay-filter="aihao" class="ui-margin-top10">
+							<option value=""></option>
+							<option value="0">写作</option>
+							<option value="1" selected="">阅读</option>
+							<option value="2">游戏</option>
+							<option value="3">音乐</option>
+							<option value="4">旅行</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 
+	  <div class="layui-row">
+	  <div class="layui-col-md3"><ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+  <li class="layui-nav-item layui-nav-itemed">
+    <a href="javascript:;">默认展开</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:;">选项一</a></dd>
+      <dd><a href="javascript:;">选项二</a></dd>
+      <dd><a href="javascript:;">选项三</a></dd>
+      <dd><a href="">跳转项</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">解决方案</a>
+    <dl class="layui-nav-child">
+      <dd><a href="">移动模块</a></dd>
+      <dd><a href="">后台模版</a></dd>
+      <dd><a href="">电商平台</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="">云市场</a></li>
+  <li class="layui-nav-item"><a href="">社区</a></li>
+</ul></div>
+	  <div class="layui-col-md9"> <table class="layui-hide" id="pubList"  lay-filter="showDetail"></table></div>
+	  </div>
+</div>
+<% } %>
+<script>
+    layui.config({
+        version: "3.0.0"
+        ,base: '${staticPath}/mods/'  //这里实际使用时，建议改成绝对路径
+    }).extend({
+        fly: 'index'
+    }).use('fly');
+</script>

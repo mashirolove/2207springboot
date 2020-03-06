@@ -75,9 +75,9 @@ public class AcceptOrder extends BaseBeanController<Example> {
         model.addAttribute("orderBy",orderBy);
         model.addAttribute("listUrl",listUrl);
         model.addAttribute("isColumn",false);
-        return new ModelAndView("modules/front/pubManage/index");
+        return new ModelAndView("modules/front/orderList/index");
     }
-    @GetMapping(value = "pubOrder")
+    @GetMapping(value = "showDetail")
     public ModelAndView newOrder(Model model,
                               @PathVariable(value = "page",required = false) Integer page,
                               @PathVariable(value = "orderBy",required = false) String orderBy) {
@@ -95,7 +95,7 @@ public class AcceptOrder extends BaseBeanController<Example> {
         model.addAttribute("orderBy",orderBy);
         model.addAttribute("listUrl",listUrl);
         model.addAttribute("isColumn",false);
-        return new ModelAndView("modules/front/pubManage/pubOrder");
+        return new ModelAndView("modules/front/orderList/orderDetail");
     }
 
     @GetMapping({"my"})
@@ -107,7 +107,7 @@ public class AcceptOrder extends BaseBeanController<Example> {
         Page examplePageBean = listExamplePage(page,20,true, "publish");
         model.addAttribute("examplePageBean",examplePageBean);
         model.addAttribute("listUrl",listUrl);
-        return new ModelAndView("modules/front/example/my");
+        return new ModelAndView("modules/front/acceptOrder/index");
     }
 
     /**

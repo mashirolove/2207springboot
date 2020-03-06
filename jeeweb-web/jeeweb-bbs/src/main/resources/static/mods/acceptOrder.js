@@ -9,8 +9,6 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(
 	var table = layui.table;
 	var laydate = layui.laydate;
 	var layer=layui.layer;
-	var pubIndex;
-	var confirmIndex
 	//发单管理分页
 	  table.render({
 	        elem: '#pubList'
