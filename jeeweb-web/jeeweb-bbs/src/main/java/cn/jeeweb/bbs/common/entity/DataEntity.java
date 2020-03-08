@@ -1,8 +1,9 @@
 package cn.jeeweb.bbs.common.entity;
 
-import cn.jeeweb.common.mvc.entity.AbstractEntity;
 import cn.jeeweb.bbs.common.constant.DataBaseConstant;
 import cn.jeeweb.bbs.modules.sys.entity.User;
+import cn.jeeweb.common.mvc.entity.AbstractEntity;
+
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.enums.FieldFill;
 import java.util.Date;

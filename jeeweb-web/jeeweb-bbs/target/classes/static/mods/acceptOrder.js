@@ -3,12 +3,14 @@
 
  @Name: 发单管理模块
  */
-layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(exports){
+layui.define(['laypage', 'fly', 'element', 'laydate','table','layer','upload'], function(exports){
 	var $ = layui.jquery;
 	var fly = layui.fly;
 	var table = layui.table;
 	var laydate = layui.laydate;
 	var layer=layui.layer;
+	var element=layui.element;
+	var upload=layui.upload;
 	//发单管理分页
 	  table.render({
 	        elem: '#pubList'
@@ -97,6 +99,47 @@ layui.define(['laypage', 'fly', 'element', 'laydate','table','layer'], function(
 		    	  layer.close(index);}
 			});
 	  });
+	  table.on('rowDouble(showDetail)', function(obj){
+			 layer.open({
+				  title: '订单22454',
+				  scrollbar: false,
+				  type: 2,
+				  content:"/acceptOrder/myOrderDetail",
+				  area:['800px','700px'],
+				/*  success:function(layero,index){
+				  }*/
+				}); 
+			});
+	  var uploadInst = upload.render({//layui文件上传插件
+		    elem: '#previewFile',
+		    url: 'https://httpbin.org/post', //改成您自己的上传接口 
+		    auto:false,
+		    bindAction: '#uploadFile',
+		    accept: 'images',
+		    acceptMime: 'image/*',
+		    choose: function(obj){
+		      //预读本地文件示例，不支持ie8
+		      obj.preview(function(index, file, result){
+		    	  $('#showImage').addClass("ui-height200");
+		        $('#showImage').attr('src', result); //图片链接（base64）
+		      });
+		    }
+		    ,done: function(res){
+		      //如果上传失败
+		      if(res.code > 0){
+		        return layer.msg('上传失败');
+		      }
+		      //上传成功
+		    }
+		    ,error: function(){
+		      //演示失败状态，并实现重传
+		      var demoText = $('#demoText');
+		      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+		      demoText.find('.demo-reload').on('click', function(){
+		        uploadInst.upload();
+		      });
+		    }
+		  });
 			 
   
   exports('acceptOrder', null);

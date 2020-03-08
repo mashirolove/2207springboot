@@ -113,7 +113,9 @@
 .font-color-red {
 	color: red;
 }
-
+.font-color-blue{
+	color:blue;
+}
 .font-size30 {
 	font-size: 30px;
 }
@@ -129,7 +131,20 @@
 .ui-color-yellowgreen {
 	color: yellowgreen;
 }
-
+.ui-padding-left40{
+	padding-left: 40px;
+}
+.ui-message-fixed{
+	position: fixed;
+    top: 500px;
+    z-index: 100000;
+    position: fixed;
+    /* left: 0; */
+    top: 499px;
+    z-index: 10000;
+    width: 100%;
+    background-color: #f4f0f0;
+}
 .ui-color-aqua {
 	color: #01aaed;
 }
@@ -152,6 +167,9 @@
 }
 
 .ui-margin-bottom5 {
+	margin-bottom: 5px;
+}
+#setP p{
 	margin-bottom: 5px;
 }
 
@@ -379,6 +397,10 @@
     border-radius: 2px;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
 }
+.ui-height160{
+	height: 160px;
+}
+
 .ui-three-line-width{
 	width: 230px;
 }
@@ -422,6 +444,9 @@
 .ui-width50{
 	width: 50px;
 }
+.ui-width80{
+	width:80px !important;
+}
 .ui-width60{
 	width: 60px;
 }
@@ -437,4 +462,18 @@
 .ui-bth-left-width{
 	width: 200px;
 	margin-left: 20px;
+}
+.ui-height200{
+	height: 200px;
+}
+.ui-lable-left{
+	text-align: left;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.ui-overflow-auto{
+	overflow: auto;
+}
+.ui-height380{
+	height: 380px;
 }

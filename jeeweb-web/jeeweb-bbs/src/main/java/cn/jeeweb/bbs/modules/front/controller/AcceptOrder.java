@@ -109,6 +109,17 @@ public class AcceptOrder extends BaseBeanController<Example> {
         model.addAttribute("listUrl",listUrl);
         return new ModelAndView("modules/front/acceptOrder/index");
     }
+    @GetMapping(value="myOrderDetail")
+    public ModelAndView showMyOrder(Model model,@PathVariable(value = "page",required = false) Integer page) {
+        if (page == null){
+            page = 1;
+        }
+        String listUrl="/example/my";
+        Page examplePageBean = listExamplePage(page,20,true, "publish");
+        model.addAttribute("examplePageBean",examplePageBean);
+        model.addAttribute("listUrl",listUrl);
+        return new ModelAndView("modules/front/acceptOrder/pubOrder");
+    }
 
     /**
      *  案列

@@ -1,4 +1,4 @@
-package cn.jeeweb.bbs;
+ package cn.jeeweb.bbs;
 
 import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
