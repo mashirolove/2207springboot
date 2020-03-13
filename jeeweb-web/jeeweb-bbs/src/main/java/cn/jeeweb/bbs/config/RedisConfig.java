@@ -30,8 +30,8 @@ import java.time.Duration;
  * @date: 2018/3/10 10:12
  * @copyright: 2017 www.jeeweb.cn Inc. All rights reserved.
  */
-// @Configuration
-//@EnableCaching
+ @Configuration
+ @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
 
     @Bean

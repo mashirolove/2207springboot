@@ -56,7 +56,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: zk.803962
-    url: jdbc:mysql://122.51.208.184:3306/bbs?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/jeewebbbs?useUnicode=true&characterEncoding=UTF-8
     type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
     filters: stat,wall,log4j
     maxActive: 20

@@ -3,9 +3,11 @@ package cn.jeeweb.bbs.config;
 import cn.jeeweb.bbs.security.shiro.filter.online.OnlineSessionFilter;
 import cn.jeeweb.bbs.security.shiro.filter.user.SysUserFilter;
 import cn.jeeweb.bbs.security.shiro.realm.UserRealm;
+import cn.jeeweb.common.security.shiro.cache.RedisCacheManager;
 import cn.jeeweb.common.security.shiro.cache.SpringCacheManagerWrapper;
 import cn.jeeweb.common.security.shiro.filter.ShiroFilterFactoryBean;
 import cn.jeeweb.common.security.shiro.session.CacheSessionDAO;
+import cn.jeeweb.common.security.shiro.session.RedisSessionDAO;
 import cn.jeeweb.common.security.shiro.session.SessionDAO;
 import cn.jeeweb.common.security.shiro.session.SessionManager;
 import cn.jeeweb.bbs.config.autoconfigure.ShiroConfigProperties;
@@ -28,6 +30,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.filter.DelegatingFilterProxy;
 
 import javax.servlet.Filter;
@@ -50,20 +53,18 @@ public class ShiroConfig {
     @Autowired
     private ShiroConfigProperties shiroConfigProperties;
 
-    @Bean
-    public  SpringCacheManagerWrapper shiroCacheManager(EhCacheCacheManager ehCacheCacheManager){
-        SpringCacheManagerWrapper shiroCacheManager = new SpringCacheManagerWrapper();
-        shiroCacheManager.setCacheManager(ehCacheCacheManager);
-        return shiroCacheManager;
-    }
-
-    @Bean
-    public SessionDAO sessionDAO(JavaUuidSessionIdGenerator sessionIdGenerator){
-        CacheSessionDAO sessionDAO=new CacheSessionDAO();
-        sessionDAO.setSessionIdGenerator(sessionIdGenerator);
-        return sessionDAO;
-    }
-    /* redis 的配置
+	/*
+	 * @Bean public SpringCacheManagerWrapper shiroCacheManager(EhCacheCacheManager
+	 * ehCacheCacheManager){ SpringCacheManagerWrapper shiroCacheManager = new
+	 * SpringCacheManagerWrapper();
+	 * shiroCacheManager.setCacheManager(ehCacheCacheManager); return
+	 * shiroCacheManager; }
+	 * 
+	 * @Bean public SessionDAO sessionDAO(JavaUuidSessionIdGenerator
+	 * sessionIdGenerator){ CacheSessionDAO sessionDAO=new CacheSessionDAO();
+	 * sessionDAO.setSessionIdGenerator(sessionIdGenerator); return sessionDAO; }
+	 */
+    //redis 的配置
     @Bean
     public RedisCacheManager shiroCacheManager(RedisTemplate<Object, Object> redisTemplate) {
         //初始化RedisCacheManager
@@ -77,7 +78,6 @@ public class ShiroConfig {
         sessionDAO.setSessionIdGenerator(sessionIdGenerator);
         return sessionDAO;
     }
-    */
     @Bean
     public RetryLimitHashedCredentialsMatcher credentialsMatcher(CacheManager shiroCacheManager){
         RetryLimitHashedCredentialsMatcher RetryLimitHashedCredentialsMatcher=new RetryLimitHashedCredentialsMatcher(shiroCacheManager);

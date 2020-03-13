@@ -1,0 +1,193 @@
+2020-03-09 10:09:44 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 996 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 10:09:44 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 10:09:46 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 10:09:48 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-1} inited
+2020-03-09 10:10:00 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 10:10:05 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 22.192 seconds (JVM running for 23.597)
+2020-03-09 10:31:27 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-1} closed
+2020-03-09 10:31:28 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 996 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 10:31:28 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 10:31:29 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 10:31:30 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-2} inited
+2020-03-09 10:31:39 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 10:31:41 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 13.421 seconds (JVM running for 1319.429)
+2020-03-09 10:40:18 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-2} closed
+2020-03-09 10:40:19 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 996 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 10:40:19 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 10:40:20 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 10:40:21 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-3} inited
+2020-03-09 10:40:29 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 10:40:32 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 13.159 seconds (JVM running for 1850.266)
+2020-03-09 10:42:48 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-3} closed
+2020-03-09 10:42:49 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 996 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 10:42:49 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 10:42:50 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 10:42:51 [ WARN ] [ AbstractApplicationContext.java :558(refresh)]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroFilter' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationAttributeSourceAdvisor' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'authorizationAttributeSourceAdvisor' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'securityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sessionManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'sessionManager' parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'shiroCacheManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'shiroCacheManager' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-03-09 10:42:51 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method shiroCacheManager in cn.jeeweb.bbs.config.ShiroConfig required a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' that could not be found.
+	- Bean method 'cacheManager' not loaded because Cache org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration unknown cache type
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' in your configuration.
+
+2020-03-09 10:43:00 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 996 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 10:43:00 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 10:43:01 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 10:43:01 [ WARN ] [ AbstractApplicationContext.java :558(refresh)]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroFilter' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationAttributeSourceAdvisor' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'authorizationAttributeSourceAdvisor' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'securityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sessionManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'sessionManager' parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'shiroCacheManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'shiroCacheManager' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-03-09 10:43:02 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method shiroCacheManager in cn.jeeweb.bbs.config.ShiroConfig required a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' that could not be found.
+	- Bean method 'cacheManager' not loaded because Cache org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration unknown cache type
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' in your configuration.
+
+2020-03-09 10:49:09 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 14080 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 10:49:09 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 10:49:11 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 10:49:12 [ WARN ] [ AbstractApplicationContext.java :558(refresh)]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroFilter' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationAttributeSourceAdvisor' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'authorizationAttributeSourceAdvisor' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'securityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sessionManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'sessionManager' parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'shiroCacheManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'shiroCacheManager' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-03-09 10:49:12 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method shiroCacheManager in cn.jeeweb.bbs.config.ShiroConfig required a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' that could not be found.
+	- Bean method 'cacheManager' not loaded because Cache org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration unknown cache type
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' in your configuration.
+
+2020-03-09 10:54:25 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 8468 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 10:54:25 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 10:54:26 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 10:54:27 [ WARN ] [ AbstractApplicationContext.java :558(refresh)]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shiroFilter' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationAttributeSourceAdvisor' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'authorizationAttributeSourceAdvisor' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'securityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sessionManager' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'sessionManager' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sessionDAO' defined in class path resource [cn/jeeweb/bbs/config/ShiroConfig.class]: Unsatisfied dependency expressed through method 'sessionDAO' parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.data.redis.core.RedisTemplate<java.lang.Object, java.lang.Object>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-03-09 10:54:27 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of method sessionDAO in cn.jeeweb.bbs.config.ShiroConfig required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+	- Bean method 'redisTemplate' not loaded because auto-configuration 'RedisAutoConfiguration' was excluded
+	- Bean method 'stringRedisTemplate' not loaded because auto-configuration 'RedisAutoConfiguration' was excluded
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+2020-03-09 10:57:26 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 1484 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 10:57:26 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 10:57:28 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 10:57:29 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-1} inited
+2020-03-09 10:57:36 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 10:57:39 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 13.176 seconds (JVM running for 14.025)
+2020-03-09 11:00:31 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-1} closed
+2020-03-09 11:00:31 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 1484 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 11:00:31 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 11:00:33 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 11:00:33 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-2} inited
+2020-03-09 11:00:38 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 11:00:40 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 8.361 seconds (JVM running for 194.932)
+2020-03-09 11:12:26 [ ERROR ] [ DruidDataSource.java :1190(handleConnectionException)]  discard connection
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 83,889 milliseconds ago.  The last packet sent successfully to the server was 26,742 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3562)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3462)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3903)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2482)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:4796)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:681)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:283)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at cn.jeeweb.bbs.modules.task.service.impl.ScheduleJobLogServiceImpl$$EnhancerBySpringCGLIB$$306511fe.onStart(<generated>)
+	at cn.jeeweb.common.quartz.factory.QuartzJobFactory.executeInternal(QuartzJobFactory.java:39)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3472)
+	... 19 more
+2020-03-09 11:21:02 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-2} closed
+2020-03-09 11:21:45 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 3512 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 11:21:45 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 11:21:46 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 11:21:48 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-1} inited
+2020-03-09 11:21:54 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 11:21:57 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 13.029 seconds (JVM running for 13.868)
+2020-03-09 11:22:12 [ INFO ] [ RetryExec.java :97(execute)]  I/O exception (java.net.SocketException) caught when processing request to {}->http://ip.taobao.com:80: Connection reset
+2020-03-09 11:22:12 [ INFO ] [ RetryExec.java :113(execute)]  Retrying request to {}->http://ip.taobao.com:80
+2020-03-09 11:23:11 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-1} closed
+2020-03-09 11:23:41 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 15300 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 11:23:41 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 11:23:43 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 11:23:44 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-1} inited
+2020-03-09 11:23:52 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 11:23:55 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 14.265 seconds (JVM running for 15.109)
+2020-03-09 11:24:38 [ INFO ] [ RetryExec.java :97(execute)]  I/O exception (java.net.SocketException) caught when processing request to {}->http://ip.taobao.com:80: Connection reset
+2020-03-09 11:24:38 [ INFO ] [ RetryExec.java :113(execute)]  Retrying request to {}->http://ip.taobao.com:80
+2020-03-09 11:25:58 [ INFO ] [ RetryExec.java :97(execute)]  I/O exception (java.net.SocketException) caught when processing request to {}->http://ip.taobao.com:80: Connection reset
+2020-03-09 11:25:58 [ INFO ] [ RetryExec.java :113(execute)]  Retrying request to {}->http://ip.taobao.com:80
+2020-03-09 11:26:11 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-1} closed
+2020-03-09 11:27:51 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 18448 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 11:27:51 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 11:27:53 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 11:27:54 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-1} inited
+2020-03-09 11:28:05 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 11:28:09 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 18.899 seconds (JVM running for 19.959)
+2020-03-09 11:38:41 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-1} closed
+2020-03-09 11:38:41 [ INFO ] [ StartupInfoLogger.java :50(logStarting)]  Starting BbsBootApplication on LAPTOP-MEU0NI9O with PID 18448 (D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs\target\classes started by mashiro in D:\studyData\git\jeeweb\jeeweb-web\jeeweb-bbs)
+2020-03-09 11:38:41 [ INFO ] [ SpringApplication.java :659(logStartupProfileInfo)]  No active profile set, falling back to default profiles: default
+2020-03-09 11:38:43 [ WARN ] [ ClassPathMapperScanner.java :166(doScan)]  No MyBatis mapper was found in '[com.baomidou.springboot.mapper*]' package. Please check your configuration.
+2020-03-09 11:38:44 [ INFO ] [ DruidDataSource.java :669(init)]  {dataSource-2} inited
+2020-03-09 11:38:52 [ INFO ] [ PropertySourcedRequestMappingHandlerMapping.java :69(initHandlerMethods)]  Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-09 11:38:55 [ INFO ] [ StartupInfoLogger.java :59(logStarted)]  Started BbsBootApplication in 13.282 seconds (JVM running for 665.231)
+2020-03-09 14:54:42 [ INFO ] [ DruidDataSource.java :1385(close)]  {dataSource-2} closed

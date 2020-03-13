@@ -1,5 +1,6 @@
 package cn.jeeweb.bbs.modules.sys.service.impl;
 
+import cn.jeeweb.bbs.modules.sys.entity.OrderUser;
 import cn.jeeweb.bbs.modules.sys.entity.User;
 import cn.jeeweb.bbs.config.autoconfigure.ShiroConfigProperties;
 import org.apache.shiro.crypto.RandomNumberGenerator;
@@ -24,6 +25,19 @@ public class PasswordService {
 	}
 
 	public void chenckEncryptPassword(User user) {
+		//user.setSalt(randomNumberGenerator.nextBytes().toHex());
+		String newPassword = new SimpleHash(shiroConfigProperties.getCredentialsHashAlgorithmName(), user.getPassword(),
+				ByteSource.Util.bytes(user.getCredentialsSalt()), shiroConfigProperties.getCredentialsHashIterations()).toHex();
+		user.setPassword(newPassword);
+	}
+	public void encryptPassword(OrderUser user) {
+		user.setSalt(randomNumberGenerator.nextBytes().toHex());
+		String newPassword = new SimpleHash(shiroConfigProperties.getCredentialsHashAlgorithmName(), user.getPassword(),
+				ByteSource.Util.bytes(user.getCredentialsSalt()), shiroConfigProperties.getCredentialsHashIterations()).toHex();
+		user.setPassword(newPassword);
+	}
+
+	public void chenckEncryptPassword(OrderUser user) {
 		//user.setSalt(randomNumberGenerator.nextBytes().toHex());
 		String newPassword = new SimpleHash(shiroConfigProperties.getCredentialsHashAlgorithmName(), user.getPassword(),
 				ByteSource.Util.bytes(user.getCredentialsSalt()), shiroConfigProperties.getCredentialsHashIterations()).toHex();

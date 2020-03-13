@@ -1,97 +1,112 @@
-2020-03-04 10:42:37 [ ERROR ] [ ErrorMvcAutoConfiguration$SpelView.java :235(render)] Cannot render error page for request [/pubManage] and exception [No message available] as the response has already been committed. As a result, the response may have the wrong status code.
-2020-03-04 10:42:47 [ ERROR ] [ ErrorMvcAutoConfiguration$SpelView.java :235(render)] Cannot render error page for request [/pubManage] and exception [No message available] as the response has already been committed. As a result, the response may have the wrong status code.
-2020-03-04 10:43:21 [ ERROR ] [ ErrorMvcAutoConfiguration$SpelView.java :235(render)] Cannot render error page for request [/pubManage] and exception [No message available] as the response has already been committed. As a result, the response may have the wrong status code.
-2020-03-04 10:43:42 [ ERROR ] [ ErrorMvcAutoConfiguration$SpelView.java :235(render)] Cannot render error page for request [/pubManage] and exception [No message available] as the response has already been committed. As a result, the response may have the wrong status code.
-2020-03-04 13:24:02 [ ERROR ] [ SpringApplication.java :842(reportFailure)] Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/mashiro/.m2/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/mashiro/.m2/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'FrontPubManageController' method 
-public org.springframework.web.servlet.ModelAndView cn.jeeweb.bbs.modules.front.controller.PubManageController.newOrder(org.springframework.ui.Model,java.lang.Integer,java.lang.String)
-to {[/pubManage/page/{page} || /pubManage/ || /pubManage || /pubManage/{orderBy}/page/{page} || /pubManage/{orderBy}],methods=[GET]}: There is already 'FrontPubManageController' bean method
-public org.springframework.web.servlet.ModelAndView cn.jeeweb.bbs.modules.front.controller.PubManageController.index(org.springframework.ui.Model,java.lang.Integer,java.lang.String) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:729)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:192)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1270)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
-	at cn.jeeweb.bbs.BbsBootApplication.main(BbsBootApplication.java:25)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/mashiro/.m2/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'FrontPubManageController' method 
-public org.springframework.web.servlet.ModelAndView cn.jeeweb.bbs.modules.front.controller.PubManageController.newOrder(org.springframework.ui.Model,java.lang.Integer,java.lang.String)
-to {[/pubManage/page/{page} || /pubManage/ || /pubManage || /pubManage/{orderBy}/page/{page} || /pubManage/{orderBy}],methods=[GET]}: There is already 'FrontPubManageController' bean method
-public org.springframework.web.servlet.ModelAndView cn.jeeweb.bbs.modules.front.controller.PubManageController.index(org.springframework.ui.Model,java.lang.Integer,java.lang.String) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:729)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:192)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1270)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1127)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1325)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1291)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1193)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1096)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721)
-	... 24 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'FrontPubManageController' method 
-public org.springframework.web.servlet.ModelAndView cn.jeeweb.bbs.modules.front.controller.PubManageController.newOrder(org.springframework.ui.Model,java.lang.Integer,java.lang.String)
-to {[/pubManage/page/{page} || /pubManage/ || /pubManage || /pubManage/{orderBy}/page/{page} || /pubManage/{orderBy}],methods=[GET]}: There is already 'FrontPubManageController' bean method
-public org.springframework.web.servlet.ModelAndView cn.jeeweb.bbs.modules.front.controller.PubManageController.index(org.springframework.ui.Model,java.lang.Integer,java.lang.String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1325)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1291)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1193)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1096)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721)
-	... 41 more
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'FrontPubManageController' method 
-public org.springframework.web.servlet.ModelAndView cn.jeeweb.bbs.modules.front.controller.PubManageController.newOrder(org.springframework.ui.Model,java.lang.Integer,java.lang.String)
-to {[/pubManage/page/{page} || /pubManage/ || /pubManage || /pubManage/{orderBy}/page/{page} || /pubManage/{orderBy}],methods=[GET]}: There is already 'FrontPubManageController' bean method
-public org.springframework.web.servlet.ModelAndView cn.jeeweb.bbs.modules.front.controller.PubManageController.index(org.springframework.ui.Model,java.lang.Integer,java.lang.String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:580)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:544)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:265)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:250)
-	at java.util.LinkedHashMap.forEach(Unknown Source)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:248)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:218)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:129)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
-	... 55 more
-2020-03-05 19:19:10 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)] 
+2020-03-09 10:42:51 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method shiroCacheManager in cn.jeeweb.bbs.config.ShiroConfig required a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' that could not be found.
+	- Bean method 'cacheManager' not loaded because Cache org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration unknown cache type
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' in your configuration.
+
+2020-03-09 10:43:02 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method shiroCacheManager in cn.jeeweb.bbs.config.ShiroConfig required a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' that could not be found.
+	- Bean method 'cacheManager' not loaded because Cache org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration unknown cache type
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' in your configuration.
+
+2020-03-09 10:49:12 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method shiroCacheManager in cn.jeeweb.bbs.config.ShiroConfig required a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' that could not be found.
+	- Bean method 'cacheManager' not loaded because Cache org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration unknown cache type
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.cache.ehcache.EhCacheCacheManager' in your configuration.
+
+2020-03-09 10:54:27 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of method sessionDAO in cn.jeeweb.bbs.config.ShiroConfig required a bean of type 'org.springframework.data.redis.core.RedisTemplate' that could not be found.
+	- Bean method 'redisTemplate' not loaded because auto-configuration 'RedisAutoConfiguration' was excluded
+	- Bean method 'stringRedisTemplate' not loaded because auto-configuration 'RedisAutoConfiguration' was excluded
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.data.redis.core.RedisTemplate' in your configuration.
+
+2020-03-09 11:12:26 [ ERROR ] [ DruidDataSource.java :1190(handleConnectionException)] discard connection
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 83,889 milliseconds ago.  The last packet sent successfully to the server was 26,742 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3562)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3462)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3903)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2482)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:4796)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:681)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:283)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at cn.jeeweb.bbs.modules.task.service.impl.ScheduleJobLogServiceImpl$$EnhancerBySpringCGLIB$$306511fe.onStart(<generated>)
+	at cn.jeeweb.common.quartz.factory.QuartzJobFactory.executeInternal(QuartzJobFactory.java:39)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3472)
+	... 19 more
+2020-03-12 16:48:31 [ ERROR ] [ LoggingFailureAnalysisReporter.java :42(report)] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -105,93 +120,3 @@ Action:
 
 Verify the connector's configuration, identify and stop any process that's listening on port 9083, or configure this application to listen on another port.
 
-2020-03-05 19:45:18 [ ERROR ] [ SpringApplication.java :842(reportFailure)] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [cn.jeeweb.bbs.BbsBootApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'FrontPubManageController' for bean class [cn.jeeweb.bbs.modules.front.controller.PubManageController] conflicts with existing, non-compatible bean definition of same name and class [cn.jeeweb.bbs.modules.front.controller.AcceptOrder]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:184)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:316)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
-	at cn.jeeweb.bbs.BbsBootApplication.main(BbsBootApplication.java:25)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'FrontPubManageController' for bean class [cn.jeeweb.bbs.modules.front.controller.PubManageController] conflicts with existing, non-compatible bean definition of same name and class [cn.jeeweb.bbs.modules.front.controller.AcceptOrder]
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
-	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:288)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:202)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:170)
-	... 18 more
-2020-03-05 19:45:44 [ ERROR ] [ SpringApplication.java :842(reportFailure)] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [cn.jeeweb.bbs.BbsBootApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'FrontPubManageController' for bean class [cn.jeeweb.bbs.modules.front.controller.PubManageController] conflicts with existing, non-compatible bean definition of same name and class [cn.jeeweb.bbs.modules.front.controller.AcceptOrder]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:184)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:316)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
-	at cn.jeeweb.bbs.BbsBootApplication.main(BbsBootApplication.java:25)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'FrontPubManageController' for bean class [cn.jeeweb.bbs.modules.front.controller.PubManageController] conflicts with existing, non-compatible bean definition of same name and class [cn.jeeweb.bbs.modules.front.controller.AcceptOrder]
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
-	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:288)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:202)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:170)
-	... 18 more
-2020-03-05 19:46:27 [ ERROR ] [ SpringApplication.java :842(reportFailure)] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [cn.jeeweb.bbs.BbsBootApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'FrontPubManageController' for bean class [cn.jeeweb.bbs.modules.front.controller.PubManageController] conflicts with existing, non-compatible bean definition of same name and class [cn.jeeweb.bbs.modules.front.controller.AcceptOrder]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:184)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:316)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
-	at cn.jeeweb.bbs.BbsBootApplication.main(BbsBootApplication.java:25)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'FrontPubManageController' for bean class [cn.jeeweb.bbs.modules.front.controller.PubManageController] conflicts with existing, non-compatible bean definition of same name and class [cn.jeeweb.bbs.modules.front.controller.AcceptOrder]
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
-	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:288)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:202)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:170)
-	... 18 more

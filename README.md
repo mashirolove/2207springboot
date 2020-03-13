@@ -1,5 +1,38 @@
+2020/03/13
+
+  注册
+
+​    @RequestMapping 注解映射关系时
+
+   @RequestParam注解也参与其中，@RequestParam标记的属性不同映射的关系就不同，所有如果前段name属性和后台@RequestParam标记的属性名不相同就会报404
+
+
+
+2020/03/05
+  发单管理
+   layui 在弹出层等小窗口显示页面时 可以用 layui-col-smXX来代替 layui-col-mdXX来完成布局
+    xs（超小屏幕，如手机）、sm（小屏幕，如平板）、md（桌面中等屏幕）、lg（桌面大型屏幕）
+
+2020/03/04
+ 发单管理
+   发单页面弹出层通过ajax请求调用外部html
+   ajax请求被后台拦截以至于没有达到预期要求,现已经解决
+
+   layui弹出层会导致layui的栅格布局失效（未解决）
+
+
+
+
+
+
+
+
+
+
+
 JeeWeb敏捷开发平台
 ===============
+
 * 	QQ交流群： 570062301（满）、522959928
 * 	官方网站： [https://www.jeeweb.cn](https://www.jeeweb.cn)
 * 	文档地址： [https://doc.jeeweb.cn](https://doc.jeeweb.cn)
@@ -150,13 +183,13 @@ JeeWeb 功能特点
 * 服务端验证：Hibernate Validator
 * 模板标签：Beetl
 * 任务调度：Quartz
-* 持久层框架：Hibernate 
+* 持久层框架：Hibernate???(实际上应该是mabatisPlus) 
 * 数据库连接池：Alibaba Druid
 * 缓存框架：Redis、Ehcache
 * 并发框架：Disruptor
 * 日志管理：SLF4J、Log4j
 * 工具类：Apache Commons、Jackson、Xstream、
- 
+
 2、前端
 
 * JS框架：jQuery。
@@ -327,14 +360,3 @@ jeeweb
 
 
 
-2020/03/04
- 发单管理
-   发单页面弹出层通过ajax请求调用外部html
-   ajax请求被后台拦截以至于没有达到预期要求,现已经解决
-   
-   layui弹出层会导致layui的栅格布局失效（未解决）
- 
-2020/03/05
-  发单管理
-   layui 在弹出层等小窗口显示页面时 可以用 layui-col-smXX来代替 layui-col-mdXX来完成布局
-    xs（超小屏幕，如手机）、sm（小屏幕，如平板）、md（桌面中等屏幕）、lg（桌面大型屏幕）

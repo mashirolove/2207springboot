@@ -9,8 +9,10 @@ import cn.jeeweb.bbs.modules.posts.entity.Posts;
 import cn.jeeweb.bbs.modules.posts.service.IPostsCommentService;
 import cn.jeeweb.bbs.modules.posts.service.IPostsService;
 import cn.jeeweb.bbs.modules.sys.entity.Message;
+import cn.jeeweb.bbs.modules.sys.entity.OrderUser;
 import cn.jeeweb.bbs.modules.sys.entity.User;
 import cn.jeeweb.bbs.modules.sys.service.IMessageService;
+import cn.jeeweb.bbs.modules.sys.service.IOrderUserService;
 import cn.jeeweb.bbs.modules.sys.service.IUserService;
 import cn.jeeweb.bbs.security.shiro.credential.RetryLimitHashedCredentialsMatcher;
 import cn.jeeweb.bbs.security.shiro.exception.RepeatAuthenticationException;
@@ -58,6 +60,8 @@ public class UserController extends BaseController {
 	private IMessageService messageService;
 	@Autowired
 	private IEmailSendService emailSendService;
+	@Autowired
+	private IOrderUserService orderUserService;
 
 	/**
 	 *  登陆
@@ -170,35 +174,39 @@ public class UserController extends BaseController {
 	@PostMapping("/register")
 	public Object doRegister(@RequestParam("vercode") String vercode,
 								   @RequestParam("phone") String phone,
-								   @RequestParam("realname") String realname,
+								   @RequestParam("loginName") String loginName,
 								   @RequestParam("pass") String pass,
 								   @RequestParam("repass") String repass) {
 		try {
 			//验证手机验证码
-			if (!SmsVercode.validateCode(ServletUtils.getRequest(),phone,vercode)){
-				return Response.error("手机验证码错误！");
-			}
-			if (!pass.equals(repass)){
-				return Response.error("两次输入的密码不相同！");
-			}
-			//手机号码
-			if (userService.findByPhone(phone)!=null){
-				return Response.error("您的手机号码已经存在，请直接登陆！");
-			}
-			//昵称
-			if (userService.findByRealname(realname)!=null){
-				return Response.error("您的昵称已经被使用，请更换！");
-			}
-			User user = new User();
-			user.setDefault();
-			user.setPhone(phone);
-			user.setRealname(realname);
-			user.setPassword(pass);
+			/*
+			 * if (!SmsVercode.validateCode(ServletUtils.getRequest(),phone,vercode)){
+			 * return Response.error("手机验证码错误！"); }
+			 */
+			/*
+			 * if (!pass.equals(repass)){ return Response.error("两次输入的密码不相同！"); } //手机号码 if
+			 * (userService.findByPhone(phone)!=null){ return
+			 * Response.error("您的手机号码已经存在，请直接登陆！"); } //昵称 if
+			 * (userService.findByRealname(realname)!=null){ return
+			 * Response.error("您的昵称已经被使用，请更换！"); }
+			 */
+			loginName="admin";
+			OrderUser orderUser = new OrderUser();
+			orderUser.setPhone(phone);
+			orderUser.setLoginName(loginName);
+			orderUser.setPassword(pass);
+			orderUser.setNickname(loginName);
 			Random random = new Random();
-			String portrait = "/static/images/avatar/"+random.nextInt(13)+".jpg";
-			user.setPortrait(portrait);
-			user.setCity(AddressUtils.getRealAddressByIP(IpUtils.getIpAddr(ServletUtils.getRequest())));
-			userService.register(user);
+			String head = "/static/images/avatar/"+random.nextInt(13)+".jpg";
+			orderUser.setHead(head);
+			/*
+			 * 开发环境下无法得知实际ip,无法得知具体城市
+			 * orderUser.setLastLoginIp(AddressUtils.getRealAddressByIP(IpUtils.getIpAddr(
+			 * ServletUtils.getRequest())));
+			 */
+			orderUser.setLastLoginIp(IpUtils.getIpAddr(ServletUtils.getRequest()));
+			orderUser.setLoginIP(IpUtils.getIpAddr(ServletUtils.getRequest()));
+			orderUserService.register(orderUser);
 			Response response = Response.ok("恭喜您注册成功，请登录！");
 			response.put("action","/user/login");
 			return response;

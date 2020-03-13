@@ -39,7 +39,7 @@ import java.util.List;
  *
  * @version V1.0
  * @package cn.jeeweb.bbs.modules.modules.front.controller
- * @title: acceptOrder控制器
+ * @title: 接受订单控制器
  * @description: example控制器
  * @author: 王存见
  * @date: 2018-09-04 16:46:10

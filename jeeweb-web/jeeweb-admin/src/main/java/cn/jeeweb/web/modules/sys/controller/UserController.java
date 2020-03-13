@@ -292,6 +292,7 @@ public class UserController extends BaseBeanController<User> {
 			entityWrapper.eq("uo.organization_id", organizationid);
 		}
 		propertyPreFilterable.addQueryProperty("id");
+		
 		// 预处理
 		QueryableConvertUtils.convertQueryValueToEntityValue(queryable, User.class);
 		List<User> userList = userService.listWithNoPage(queryable,entityWrapper);

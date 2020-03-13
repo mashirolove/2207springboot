@@ -18,8 +18,8 @@ import org.springframework.core.io.ClassPathResource;
  * @copyright: 2017 www.jeeweb.cn Inc. All rights reserved.
  */
 
-@Configuration
-@EnableCaching//标注启动缓存.
+//@Configuration
+//@EnableCaching//标注启动缓存.
 public class CacheConfig {
 
     /**

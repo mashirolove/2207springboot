@@ -1,4 +1,4 @@
-package cn.jeeweb.bbs.interceptor;
+ package cn.jeeweb.bbs.interceptor;
 
 import cn.jeeweb.bbs.modules.sys.entity.Menu;
 import cn.jeeweb.bbs.security.shiro.realm.UserRealm;
