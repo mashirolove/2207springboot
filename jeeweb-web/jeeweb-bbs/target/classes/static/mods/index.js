@@ -55,7 +55,6 @@ layui.define(['layer', 'laytpl', 'carousel','form', 'element', 'upload', 'util']
     //Ajax
     json: function(url, data, success, options){
       var that = this, type = typeof data === 'function';
-      
       if(type){
         options = success
         success = data;

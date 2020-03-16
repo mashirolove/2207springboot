@@ -4,7 +4,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import cn.jeeweb.bbs.security.shiro.realm.UserRealm;
+import cn.jeeweb.bbs.security.shiro.realm.OrderUserRealm;
 import cn.jeeweb.bbs.utils.LoginLogUtils;
 import cn.jeeweb.bbs.utils.UserUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -113,10 +113,10 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
 
 	@Override
 	protected void issueSuccessRedirect(ServletRequest request, ServletResponse response) throws Exception {
-		UserRealm.Principal p = UserUtils.getPrincipal();
+		OrderUserRealm.Principal p = UserUtils.getPrincipal();
 		UserUtils.clearCache();
 		if (p != null && !p.isMobileLogin()) {
-			LoginLogUtils.recordSuccessLoginLog(p.getUsername(),"登陆成功");
+			LoginLogUtils.recordSuccessLoginLog(p.getLoginName(),"登陆成功");
 			WebUtils.issueRedirect(request, response, getSuccessUrl(), null, true);
 		} else {
 			/*Response ajaxJson = new Response();

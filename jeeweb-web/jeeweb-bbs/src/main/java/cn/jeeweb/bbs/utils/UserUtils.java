@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Set;
 
 import cn.jeeweb.bbs.modules.sys.entity.Menu;
+import cn.jeeweb.bbs.modules.sys.entity.OrderUser;
 import cn.jeeweb.bbs.modules.sys.entity.Role;
 import cn.jeeweb.bbs.modules.sys.entity.User;
 import cn.jeeweb.bbs.modules.sys.service.IMenuService;
+import cn.jeeweb.bbs.modules.sys.service.IOrderUserService;
 import cn.jeeweb.bbs.modules.sys.service.IRoleService;
 import cn.jeeweb.bbs.modules.sys.service.IUserService;
-import cn.jeeweb.bbs.security.shiro.realm.UserRealm;
+import cn.jeeweb.bbs.security.shiro.realm.OrderUserRealm;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.UnavailableSecurityManagerException;
 import org.apache.shiro.session.InvalidSessionException;
@@ -39,7 +41,9 @@ import org.springframework.core.env.Environment;
  */
 public class UserUtils {
 
-	private static IUserService userService = SpringContextHolder.getBean(IUserService.class);
+	// private static IUserService userService =
+	// SpringContextHolder.getBean(IUserService.class);
+	private static IOrderUserService orderService = SpringContextHolder.getBean(IOrderUserService.class);
 	private static IRoleService roleService = SpringContextHolder.getBean(IRoleService.class);
 	private static IMenuService menuService = SpringContextHolder.getBean(IMenuService.class);
 	public static final String USER_CACHE = "userCache";
@@ -56,36 +60,50 @@ public class UserUtils {
 	 * @param id
 	 * @return 取不到返回null
 	 */
-	public static User get(String id) {
-		User user = (User) CacheUtils.get(USER_CACHE, USER_CACHE_ID_ + id);
-		if (user == null) {
-			user = userService.selectById(id);
-			if (user == null) {
+	public static OrderUser get(String id) {
+		OrderUser orderUser = (OrderUser) CacheUtils.get(USER_CACHE, USER_CACHE_ID_ + id);
+		if (orderUser == null) {
+			orderUser = orderService.selectById(id);
+			if (orderUser == null) {
 				return null;
 			}
-			CacheUtils.put(USER_CACHE, USER_CACHE_ID_ + user.getId(), user);
-			CacheUtils.put(USER_CACHE, USER_CACHE_USER_NAME_ + user.getUsername(), user);
+			CacheUtils.put(USER_CACHE, USER_CACHE_ID_ + orderUser.getId(), orderUser);
+			CacheUtils.put(USER_CACHE, USER_CACHE_USER_NAME_ + orderUser.getLoginName(), orderUser);
 		}
-		return user;
+		return orderUser;
 	}
 
+	/*	*//**
+			 * 根据用户名获取用户
+			 * 
+			 * @param username
+			 * @return
+			 *//*
+				 * public static User getByUserName(String username) { User user = (User)
+				 * CacheUtils.get(USER_CACHE, USER_CACHE_USER_NAME_ + username); if (user ==
+				 * null) { user = userService.findByUsername(username); if (user == null) {
+				 * return null; } CacheUtils.put(USER_CACHE, USER_CACHE_ID_ + user.getId(),
+				 * user); CacheUtils.put(USER_CACHE, USER_CACHE_USER_NAME_ + user.getUsername(),
+				 * user); } return user; }
+				 */
+
 	/**
-	 * 根据用户名获取用户
+	 * 根据用户登陆名获取用户
 	 * 
-	 * @param username
+	 * @param loginName
 	 * @return
 	 */
-	public static User getByUserName(String username) {
-		User user = (User) CacheUtils.get(USER_CACHE, USER_CACHE_USER_NAME_ + username);
-		if (user == null) {
-			user = userService.findByUsername(username);
-			if (user == null) {
+	public static OrderUser getByLoginName(String loginName) {
+		OrderUser orderUser = (OrderUser) CacheUtils.get(USER_CACHE, USER_CACHE_USER_NAME_ + loginName);
+		if (orderUser == null) {
+			orderUser = orderService.findByLoginName(loginName);
+			if (orderUser == null) {
 				return null;
 			}
-			CacheUtils.put(USER_CACHE, USER_CACHE_ID_ + user.getId(), user);
-			CacheUtils.put(USER_CACHE, USER_CACHE_USER_NAME_ + user.getUsername(), user);
+			CacheUtils.put(USER_CACHE, USER_CACHE_ID_ + orderUser.getId(), orderUser);
+			CacheUtils.put(USER_CACHE, USER_CACHE_USER_NAME_ + orderUser.getLoginName(), orderUser);
 		}
-		return user;
+		return orderUser;
 	}
 
 	/**
@@ -103,31 +121,53 @@ public class UserUtils {
 	 * 
 	 * @param user
 	 */
-	public static void clearCache(User user) {
-		CacheUtils.remove(USER_CACHE, USER_CACHE_ID_ + user.getId());
-		CacheUtils.remove(USER_CACHE, USER_CACHE_USER_NAME_ + user.getUsername());
+	public static void clearCache(OrderUser orderUser) {
+		CacheUtils.remove(USER_CACHE, USER_CACHE_ID_ + orderUser.getId());
+		CacheUtils.remove(USER_CACHE, USER_CACHE_USER_NAME_ + orderUser.getLoginName());
 	}
 
 	/**
 	 * 获取当前用户
 	 * 
 	 * @return 取不到返回 new User()
+	 *//*
+		 * public static OrderUser getUser() { UserRealm.Principal principal =
+		 * getPrincipal(); if (principal != null) { User user = get(principal.getId());
+		 * if (user != null) { return user; } return new User(); } //
+		 * 如果没有登录，则返回实例化空的User对象。 User user = new User(); user.setDefault(); return
+		 * user; }
+		 */
+
+	/**
+	 * 获取当前用户
+	 * 
+	 * @return 取不到返回 new User()
 	 */
-	public static User getUser() {
-		UserRealm.Principal principal = getPrincipal();
+	public static OrderUser getUser() {
+		OrderUserRealm.Principal principal = getPrincipal();
 		if (principal != null) {
-			User user = get(principal.getId());
-			if (user != null) {
-				return user;
+			OrderUser orderUser = get(principal.getId());
+			if (orderUser != null) {
+				return orderUser;
 			}
-			return new User();
+			return new OrderUser();
 		}
 		// 如果没有登录，则返回实例化空的User对象。
-		User user =	new User();
-		user.setDefault();
-		return user;
+		OrderUser orderUser = new OrderUser();
+		orderUser.setDeful();
+		return orderUser;
 	}
 
+	/**
+	 * 获取当前用户角色列表
+	 * 
+	 * @return
+	 *//*
+		 * public static List<Role> getRoleList() { List<Role> roleList = (List<Role>)
+		 * getCache(CACHE_ROLE_LIST); if (roleList == null) { User user = getUser();
+		 * roleList = roleService.findListByUserId(user.getId());
+		 * putCache(CACHE_ROLE_LIST, roleList); } return roleList; }
+		 */
 	/**
 	 * 获取当前用户角色列表
 	 * 
@@ -136,8 +176,8 @@ public class UserUtils {
 	public static List<Role> getRoleList() {
 		List<Role> roleList = (List<Role>) getCache(CACHE_ROLE_LIST);
 		if (roleList == null) {
-			User user = getUser();
-			roleList = roleService.findListByUserId(user.getId());
+			OrderUser orderUser = getUser();
+			roleList = roleService.findListByUserId(orderUser.getId());
 			putCache(CACHE_ROLE_LIST, roleList);
 		}
 		return roleList;
@@ -153,6 +193,17 @@ public class UserUtils {
 		}));
 	}
 
+	/*	*//**
+			 * 获取当前用户授权菜单
+			 * 
+			 * @return
+			 *//*
+				 * public static List<Menu> getMenuList() { List<Menu> menuList = (List<Menu>)
+				 * getCache(CACHE_MENU_LIST); if (menuList == null) { User user = getUser();
+				 * menuList = menuService.findMenuByUserId(user.getId());
+				 * putCache(CACHE_MENU_LIST, menuList); } return menuList; }
+				 */
+
 	/**
 	 * 获取当前用户授权菜单
 	 * 
@@ -161,8 +212,8 @@ public class UserUtils {
 	public static List<Menu> getMenuList() {
 		List<Menu> menuList = (List<Menu>) getCache(CACHE_MENU_LIST);
 		if (menuList == null) {
-			User user = getUser();
-			menuList = menuService.findMenuByUserId(user.getId());
+			OrderUser orderUser = getUser();
+			menuList = menuService.findMenuByUserId(orderUser.getId());
 			putCache(CACHE_MENU_LIST, menuList);
 		}
 		return menuList;
@@ -172,16 +223,28 @@ public class UserUtils {
 	 * 获取当前用户授权菜单
 	 *
 	 * @return
+	 *//*
+		 * public static List<String> getPermissionList() { List<String> permissionList
+		 * = (List<String>) getCache(CACHE_PERMISSION_LIST); if (permissionList == null)
+		 * { User user = getUser(); permissionList =
+		 * menuService.findPermissionByUserId(user.getId());
+		 * putCache(CACHE_PERMISSION_LIST, permissionList); } return permissionList; }
+		 */
+	/**
+	 * 获取当前用户授权菜单
+	 *
+	 * @return
 	 */
 	public static List<String> getPermissionList() {
 		List<String> permissionList = (List<String>) getCache(CACHE_PERMISSION_LIST);
 		if (permissionList == null) {
-			User user = getUser();
-			permissionList = menuService.findPermissionByUserId(user.getId());
+			OrderUser orderUser = getUser();
+			permissionList = menuService.findPermissionByUserId(orderUser.getId());
 			putCache(CACHE_PERMISSION_LIST, permissionList);
 		}
 		return permissionList;
 	}
+
 	/**
 	 * 获取当前菜单
 	 * 
@@ -200,7 +263,7 @@ public class UserUtils {
 			// 全匹配查找
 			List<Menu> menuList = getMenuList();
 			return getCurrentMenu(menuList, url);
-		}catch (Exception e){
+		} catch (Exception e) {
 
 		}
 		return new Menu();
@@ -213,11 +276,10 @@ public class UserUtils {
 				return menu;
 			}
 		}
-		/*if (StringUtils.isEmpty(url)) {
-		return null;
-		}
-		url = url.substring(0, url.lastIndexOf("/"));
-		return getCurrentMenu(menuList, url);*/
+		/*
+		 * if (StringUtils.isEmpty(url)) { return null; } url = url.substring(0,
+		 * url.lastIndexOf("/")); return getCurrentMenu(menuList, url);
+		 */
 		return null;
 	}
 
@@ -275,10 +337,10 @@ public class UserUtils {
 	/**
 	 * 获取当前登录者对象
 	 */
-	public static UserRealm.Principal getPrincipal() {
+	public static OrderUserRealm.Principal getPrincipal() {
 		try {
 			Subject subject = SecurityUtils.getSubject();
-			UserRealm.Principal principal = (UserRealm.Principal) subject.getPrincipal();
+			OrderUserRealm.Principal principal = (OrderUserRealm.Principal) subject.getPrincipal();
 			if (principal != null) {
 				return principal;
 			}

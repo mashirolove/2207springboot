@@ -42,14 +42,14 @@
       <!-- 登入后的状态 -->
       <li class="layui-nav-item">
         <a class="fly-nav-avatar" href="javascript:;">
-          <cite class="layui-hide-xs">${loginUser.realname}</cite>
-          <% if(loginUser.auth != '' && loginUser.auth == '1'){%>
+          <cite class="layui-hide-xs">${loginUser.nickname}</cite>
+          <%/*if(loginUser.auth != '' && loginUser.auth == '1'){%> //注释掉认证
           <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：${loginUser.authInfo}"></i>
+          <%}*/%> 
+          <% if(loginUser.accountLevel != '' && loginUser.accountLevel != '0'){%>
+          <i class="layui-badge fly-badge-vip layui-hide-xs">VIP${loginUser.accountLevel}</i>
           <%}%>
-          <% if(loginUser.vipLevel != '' && loginUser.vipLevel != '0'){%>
-          <i class="layui-badge fly-badge-vip layui-hide-xs">VIP${loginUser.vipLevel}</i>
-          <%}%>
-          <img src="${loginUser.portrait}" alt="${loginUser.realname}">
+          <img src="${loginUser.head}" alt="${loginUser.nickname}">
         </a>
         <dl class="layui-nav-child">
           <dd><a href="${ctx}/user/index"><i class="layui-icon">&#xe612;</i>用户中心</a></dd>

@@ -2,7 +2,7 @@ package cn.jeeweb.bbs.config;
 
 import cn.jeeweb.bbs.security.shiro.filter.online.OnlineSessionFilter;
 import cn.jeeweb.bbs.security.shiro.filter.user.SysUserFilter;
-import cn.jeeweb.bbs.security.shiro.realm.UserRealm;
+import cn.jeeweb.bbs.security.shiro.realm.OrderUserRealm;
 import cn.jeeweb.common.security.shiro.cache.RedisCacheManager;
 import cn.jeeweb.common.security.shiro.cache.SpringCacheManagerWrapper;
 import cn.jeeweb.common.security.shiro.filter.ShiroFilterFactoryBean;
@@ -89,14 +89,24 @@ public class ShiroConfig {
         return RetryLimitHashedCredentialsMatcher;
     }
 
+	
+	/*
+	 * @Bean public UserRealm userRealm(RetryLimitHashedCredentialsMatcher
+	 * credentialsMatcher){ UserRealm userRealm = new UserRealm();
+	 * userRealm.setCredentialsMatcher(credentialsMatcher);
+	 * userRealm.setAuthenticationCachingEnabled(Boolean.FALSE);
+	 * userRealm.setAuthorizationCachingEnabled(Boolean.FALSE); return userRealm; }
+	 */
+	
     @Bean
-    public UserRealm userRealm(RetryLimitHashedCredentialsMatcher credentialsMatcher){
-        UserRealm userRealm = new UserRealm();
-        userRealm.setCredentialsMatcher(credentialsMatcher);
-        userRealm.setAuthenticationCachingEnabled(Boolean.FALSE);
-        userRealm.setAuthorizationCachingEnabled(Boolean.FALSE);
-        return userRealm;
+    public OrderUserRealm orderUserRealm(RetryLimitHashedCredentialsMatcher credentialsMatcher){
+    	OrderUserRealm OrderUserRealm = new OrderUserRealm();
+    	OrderUserRealm.setCredentialsMatcher(credentialsMatcher);
+    	OrderUserRealm.setAuthenticationCachingEnabled(Boolean.FALSE);
+    	OrderUserRealm.setAuthorizationCachingEnabled(Boolean.FALSE);
+        return OrderUserRealm;
     }
+
 
     @Bean
     public JavaUuidSessionIdGenerator sessionIdGenerator(){
@@ -178,8 +188,18 @@ public class ShiroConfig {
     }
 
 
+	/*
+	 * @Bean public DefaultWebSecurityManager securityManager(SessionManager
+	 * sessionManager, UserRealm userRealm, CookieRememberMeManager
+	 * rememberMeManager){ DefaultWebSecurityManager securityManager=new
+	 * DefaultWebSecurityManager();
+	 * securityManager.setSessionManager(sessionManager);
+	 * securityManager.setRealm(userRealm);
+	 * securityManager.setRememberMeManager(rememberMeManager); return
+	 * securityManager; }
+	 */
     @Bean
-    public DefaultWebSecurityManager securityManager(SessionManager sessionManager, UserRealm userRealm, CookieRememberMeManager rememberMeManager){
+    public DefaultWebSecurityManager securityManager(SessionManager sessionManager, OrderUserRealm userRealm, CookieRememberMeManager rememberMeManager){
         DefaultWebSecurityManager securityManager=new DefaultWebSecurityManager();
         securityManager.setSessionManager(sessionManager);
         securityManager.setRealm(userRealm);

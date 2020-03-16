@@ -51,7 +51,7 @@ public class OrderUser extends AbstractEntity<String> {
     @TableField(value = "payment_password")
 	private String paymentPassword;
     /**密保问题*/
-    @TableField(value = "security _question")
+    @TableField(value = "security_question")
 	private String securityQuestion;
     /**密保答案*/
     @TableField(value = "security_answer")

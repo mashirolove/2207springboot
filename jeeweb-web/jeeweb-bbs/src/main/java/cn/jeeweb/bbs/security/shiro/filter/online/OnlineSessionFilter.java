@@ -3,6 +3,7 @@ package cn.jeeweb.bbs.security.shiro.filter.online;
 
 import cn.jeeweb.common.security.shiro.session.SessionDAO;
 import cn.jeeweb.common.utils.StringUtils;
+import cn.jeeweb.bbs.modules.sys.entity.OrderUser;
 import cn.jeeweb.bbs.modules.sys.entity.User;
 import cn.jeeweb.bbs.security.shiro.ShiroConstants;
 import cn.jeeweb.bbs.security.shiro.session.mgt.OnlineSession;
@@ -64,10 +65,10 @@ public class OnlineSessionFilter extends AccessControlFilter {
 			// 把user id设置进去
 			//boolean isGuest = onlineSession.getUserId() == null  ;
 			if (StringUtils.isEmpty(onlineSession.getUserId())) {
-				User user = UserUtils.getUser();
-				if (user != null) {
-					onlineSession.setUserId(user.getId());
-					onlineSession.setUsername(user.getUsername());
+				OrderUser orderUser = UserUtils.getUser();
+				if (orderUser != null) {
+					onlineSession.setUserId(orderUser.getId());
+					onlineSession.setUsername(orderUser.getLoginName());
 					onlineSession.markAttributeChanged();
 				}
 			}

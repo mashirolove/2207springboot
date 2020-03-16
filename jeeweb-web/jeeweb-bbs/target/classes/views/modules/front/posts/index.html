@@ -13,11 +13,11 @@ description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系�
 						<div class="fly-panel-title fly-filter">
 							<ur class="layui-inline ur-width-center ur-width50">
 							<li class="layui-inline">用户ID:</li>
-							<li class="layui-inline">456465461</li>
+							<li class="layui-inline">${loginUser.id}</li>
 							</ur>
 							<ur class="layui-inline ur-width-center ur-width49">
 							<li class="layui-inline">昵称:</li>
-							<li class="layui-inline">456465461 <i
+							<li class="layui-inline">${loginUser.nickname}<i
 								class="iconfont icon-fabu"></i></li>
 							</ur>
 						</div>
@@ -25,15 +25,15 @@ description: 'JeeWeb是一款基于SpringMVC+Spring+Hibernate的敏捷开发系�
 							<ur class="layui-inline ur-width-center ur-width33"> <i
 								class="iconfont icon-jifen"></i>
 							<li class="layui-inline">可用资金</li>
-							<li class="layui-inline font-color-red">100 元</li>
+							<li class="layui-inline font-color-red">${loginUser.pay} 元</li>
 							</ur>
 							<ur class="layui-inline ur-width-center ur-width33">
 							<li class="layui-inline">可用资金</li>
-							<li class="layui-inline font-color-red">100 元</li>
+							<li class="layui-inline font-color-red">${loginUser.frozenPay}元</li>
 							</ur>
 							<ur class="layui-inline ur-width-center ur-width32">
 							<li class="layui-inline">可用资金</li>
-							<li class="layui-inline font-color-red">100 元</li>
+							<li class="layui-inline font-color-red">${loginUser.enablePay}元</li>
 							</ur>
 						</div>
 					</div>

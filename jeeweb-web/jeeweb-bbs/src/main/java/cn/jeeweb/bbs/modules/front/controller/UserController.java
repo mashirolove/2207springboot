@@ -183,14 +183,15 @@ public class UserController extends BaseController {
 			 * if (!SmsVercode.validateCode(ServletUtils.getRequest(),phone,vercode)){
 			 * return Response.error("手机验证码错误！"); }
 			 */
+			
+		 if (!pass.equals(repass)){ return Response.error("两次输入的密码不相同！"); } //手机号码 
 			/*
-			 * if (!pass.equals(repass)){ return Response.error("两次输入的密码不相同！"); } //手机号码 if
-			 * (userService.findByPhone(phone)!=null){ return
-			 * Response.error("您的手机号码已经存在，请直接登陆！"); } //昵称 if
-			 * (userService.findByRealname(realname)!=null){ return
-			 * Response.error("您的昵称已经被使用，请更换！"); }
-			 */
-			loginName="admin";
+			 * if(orderUserService.findByPhone(phone)!=null){ return
+			 * Response.error("您的手机号码已经存在，请直接登陆！"); }
+			 */ //昵称
+		 if(orderUserService.findByLoginName(loginName)!=null){ 
+				 return  Response.error("您的昵称已经被使用，请更换！"); }
+			 
 			OrderUser orderUser = new OrderUser();
 			orderUser.setPhone(phone);
 			orderUser.setLoginName(loginName);
@@ -366,7 +367,7 @@ public class UserController extends BaseController {
 		try {
 			Subject subject = SecurityUtils.getSubject();
 			if (subject != null) {
-				LoginLogUtils.recordLogoutLoginLog(UserUtils.getUser().getUsername(),"退出成功");
+				LoginLogUtils.recordLogoutLoginLog(UserUtils.getUser().getLoginName(),"退出成功");
 				subject.logout();
 			}
 		} catch (Exception e) {

@@ -3,7 +3,7 @@ package cn.jeeweb.bbs.modules.sys.controller;
 import cn.jeeweb.bbs.security.shiro.credential.RetryLimitHashedCredentialsMatcher;
 import cn.jeeweb.bbs.security.shiro.exception.RepeatAuthenticationException;
 import cn.jeeweb.bbs.security.shiro.filter.authc.FormAuthenticationFilter;
-import cn.jeeweb.bbs.security.shiro.realm.UserRealm;
+import cn.jeeweb.bbs.security.shiro.realm.OrderUserRealm;
 import cn.jeeweb.bbs.utils.LoginLogUtils;
 import cn.jeeweb.bbs.utils.UserUtils;
 import org.apache.shiro.SecurityUtils;
@@ -29,7 +29,7 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/login")
 	public ModelAndView login(HttpServletRequest request, HttpServletRequest response, Model model) {
 		// 我的电脑有缓存问题
-		UserRealm.Principal principal = UserUtils.getPrincipal(); // 如果已经登录，则跳转到管理首页
+		OrderUserRealm.Principal principal = UserUtils.getPrincipal(); // 如果已经登录，则跳转到管理首页
 		if (principal != null && !principal.isMobileLogin()) {
 			return new ModelAndView("redirect:/admin");
 		}
@@ -61,7 +61,7 @@ public class LoginController extends BaseController {
 		try {
 			Subject subject = SecurityUtils.getSubject();
 			if (subject != null && subject.isAuthenticated()) {
-				LoginLogUtils.recordLogoutLoginLog(UserUtils.getUser().getUsername(),"退出成功");
+				LoginLogUtils.recordLogoutLoginLog(UserUtils.getUser().getLoginName(),"退出成功");
 				subject.logout();
 			}
 			return new ModelAndView("modules/sys/login/login");

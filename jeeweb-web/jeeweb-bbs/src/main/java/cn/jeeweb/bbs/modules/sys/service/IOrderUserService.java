@@ -22,5 +22,12 @@ public interface IOrderUserService extends ICommonService<OrderUser> {
      * @return
      */
 	OrderUser register(OrderUser orderUser);
+	/**
+	 * 根据用户名登陆名查找用户
+	 * 
+	 * @param loginName
+	 * @return
+	 */
+	public OrderUser findByLoginName(String loginName);
 
 }

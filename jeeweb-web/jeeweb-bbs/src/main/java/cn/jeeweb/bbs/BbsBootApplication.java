@@ -2,6 +2,11 @@
 package cn.jeeweb.bbs;
 
 import com.spring4all.swagger.EnableSwagger2Doc;
+
+import cn.jeeweb.bbs.modules.sys.entity.OrderUser;
+import cn.jeeweb.bbs.modules.sys.service.impl.OrderUserServiceImpl;
+import cn.jeeweb.common.utils.SpringContextHolder;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;

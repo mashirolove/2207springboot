@@ -51,12 +51,10 @@ public class UserRealm extends AuthorizingRealm {
 		UsernamePasswordToken authcToken = (UsernamePasswordToken) token;
 		String username = authcToken.getUsername();
 		User user = userService.findByUsername(username);
-		if (user == null) {
-			user = userService.findByEmail(username);
-			if (user == null) {
-				user = userService.findByPhone(username);
-			}
-		}
+		/*
+		 * if (user == null) { user = userService.findByEmail(username); if (user ==
+		 * null) { user = userService.findByPhone(username); } }
+		 */
 		if (user == null) {
 			throw new UnknownAccountException();// 没找到帐号
 		}

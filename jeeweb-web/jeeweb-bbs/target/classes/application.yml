@@ -120,7 +120,7 @@ shiro:
    rememeberMeCookieName: jeeweb-bbs-rememeberMeCache
    rememeberMeCookieBase64CipherKey: l8cc6d2xpkT1yFtLIcLHCg== #生成方式KeyGenerator keygen = KeyGenerator.getInstance("AES");SecretKey deskey = keygen.generateKey();System.out.println(Base64.encodeToString(deskey.getEncoded()));
    filter-chain-definitions: /example/create=user;/user/home/*=anon;/example/**=anon;/posts/add=user;/posts/*/update=user;/posts/comment/**=user;/posts/*/delete=user;/posts/**=anon;/auth/**=anon;/=anon;/user/forget=anon;/user/login=anon;/user/reset=anon;/user/activate=anon;/user/*/vercode=anon;/user/register=anon;/user/logout=anon;/static/**=anon;/jcaptcha*=anon;/upload/**=anon;/admin/logout=logout;/admin/login=jCaptchaValidate,authc;/**=user,sysUser,onlineSession,perms,roles
-
+   #修改 */posts/**=anon;==>*/posts/**=user;
 #后台路径配置
 jeeweb:
   staticPath: /static

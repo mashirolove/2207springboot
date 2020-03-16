@@ -20,11 +20,9 @@
     };
     <%}else{%>
     layui.cache.user = {
-      username: '${loginUser.realname}',
+      username: '${loginUser.LoginName}',
       uid: '${loginUser.id}',
-      avatar: '${loginUser.portrait}',
-      experience: '${loginUser.experience}',
-      sex: '${loginUser.sex}'
+      avatar: '${loginUser.head}'
     };
     <%}%>
 </script>

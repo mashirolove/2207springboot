@@ -1,7 +1,7 @@
  package cn.jeeweb.bbs.interceptor;
 
 import cn.jeeweb.bbs.modules.sys.entity.Menu;
-import cn.jeeweb.bbs.security.shiro.realm.UserRealm;
+import cn.jeeweb.bbs.security.shiro.realm.OrderUserRealm;
 import cn.jeeweb.bbs.utils.MenuTreeHelper;
 import cn.jeeweb.bbs.utils.ThemeUtils;
 import cn.jeeweb.bbs.utils.UrlUtils;
@@ -44,7 +44,7 @@ public class WebInterceptor extends HandlerInterceptorAdapter {
         request.setAttribute("platformName", MessageUtils.getMessage("platform.name"));
         request.setAttribute("platformCopyright", MessageUtils.getMessage("platform.copyright"));
         request.setAttribute("platformVersion", MessageUtils.getMessage("platform.version"));
-        UserRealm.Principal principal = UserUtils.getPrincipal(); // 如果已经登录，则跳转到管理首页
+        OrderUserRealm.Principal principal = UserUtils.getPrincipal(); // 如果已经登录，则跳转到管理首页
         if (principal!=null){
             try {
                 Menu currentMenu = UserUtils.getCurrentMenu();

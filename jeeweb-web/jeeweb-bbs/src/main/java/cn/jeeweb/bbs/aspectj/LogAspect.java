@@ -3,6 +3,7 @@ package cn.jeeweb.bbs.aspectj;
 import cn.jeeweb.bbs.aspectj.annotation.Log;
 import cn.jeeweb.bbs.modules.sys.entity.LoginLog;
 import cn.jeeweb.bbs.modules.sys.entity.OperationLog;
+import cn.jeeweb.bbs.modules.sys.entity.OrderUser;
 import cn.jeeweb.bbs.modules.sys.entity.User;
 import cn.jeeweb.bbs.modules.sys.service.ILoginLogService;
 import cn.jeeweb.bbs.modules.sys.service.IOperationLogService;
@@ -87,7 +88,7 @@ public class LogAspect
             Log clazzAnnotationLog = getClazzAnnotationLog(joinPoint);
 
             // 获取当前的用户
-            User currentUser = UserUtils.getUser();
+           OrderUser currentUser = UserUtils.getUser();
 
             // *========数据库日志=========*//
             OperationLog operationLog = new OperationLog();
@@ -105,7 +106,7 @@ public class LogAspect
             operationLog.setRequestUri(ServletUtils.getRequest().getRequestURI());
             if (currentUser != null)
             {
-                operationLog.setOperationName(currentUser.getUsername());
+                operationLog.setOperationName(currentUser.getLoginName());
             }else{
                 operationLog.setOperationName("未登录用户");
             }

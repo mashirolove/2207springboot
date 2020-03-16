@@ -1,9 +1,12 @@
 package cn.jeeweb.bbs.modules.sys.service.impl;
 
 import cn.jeeweb.bbs.modules.sys.entity.OrderUser;
+import cn.jeeweb.bbs.modules.sys.entity.User;
 import cn.jeeweb.bbs.modules.sys.mapper.OrderUserMapper;
 import cn.jeeweb.bbs.modules.sys.service.IOrderUserService;
 import cn.jeeweb.common.mybatis.mvc.service.impl.CommonServiceImpl;
+import cn.jeeweb.common.mybatis.mvc.wrapper.EntityWrapper;
+import cn.jeeweb.common.utils.StringUtils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,6 +37,13 @@ public class OrderUserServiceImpl  extends CommonServiceImpl<OrderUserMapper,Ord
 		passwordService.encryptPassword(orderUser);
 		super.insert(orderUser);
 		return orderUser;
+	}
+	@Override
+	public OrderUser findByLoginName(String loginName) {
+		if (StringUtils.isEmpty(loginName)) {
+			return null;
+		}
+		return selectOne(new EntityWrapper<OrderUser>(OrderUser.class).eq("loginName", loginName));
 	}
 
 }
